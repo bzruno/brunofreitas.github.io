@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia Completo de GitHub Flavored Markdown - Meu Blog</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <main>
+<h1><a href="/">Guia Completo de GitHub Flavored Markdown</a></h1>
+
+<p class="subtitle"><em>Todos os elementos de sintaxe GFM em um único documento</em></p>
+
+<div class="article-meta">
+  <div>Publicado em: 03 - Jan - 2026</div>
+  <div>
+    Categoria: 
+    
+      
+        <a href="/categorias/documentacao">Documentação</a>, 
+      
+        <a href="/categorias/tutorial">Tutorial</a>
+      
+    
+  </div>
+  
+</div>
+
+<div class="toc">
+  <h2>Sumário</h2>
+  <ul class="toc-list">
+    
+    <li class="toc-h2">
+      <a href="#enfase-e-formatacao-de-texto">1. Ênfase e Formatação de Texto</a>
+    </li>
+    
+    <li class="toc-h2">
+      <a href="#paragrafos-e-quebras-de-linha">2. Parágrafos e Quebras de Linha</a>
+    </li>
+    
+    <li class="toc-h2">
+      <a href="#links">3. Links</a>
+    </li>
+    
+    <li class="toc-h2">
+      <a href="#imagens">4. Imagens</a>
+    </li>
+    
+    <li class="toc-h2">
+      <a href="#listas">5. Listas</a>
+    </li>
+    
+    <li class="toc-h3">
+      <a href="#lista-nao-ordenada">5.1. Lista não ordenada</a>
+    </li>
+    
+    <li class="toc-h3">
+      <a href="#lista-ordenada">5.2. Lista ordenada</a>
+    </li>
+    
+    <li class="toc-h3">
+      <a href="#lista-de-tarefas-(task-list)">5.3. Lista de tarefas (Task List)</a>
+    </li>
+    
+    <li class="toc-h2">
+      <a href="#codigo">6. Código</a>
+    </li>
+    
+    <li class="toc-h3">
+      <a href="#codigo-inline">6.1. Código inline</a>
+    </li>
+    
+    <li class="toc-h3">
+      <a href="#blocos-de-codigo">6.2. Blocos de código</a>
+    </li>
+    
+    <li class="toc-h2">
+      <a href="#citacoes-(blockquotes)">7. Citações (Blockquotes)</a>
+    </li>
+    
+    <li class="toc-h2">
+      <a href="#linhas-horizontais">8. Linhas Horizontais</a>
+    </li>
+    
+    <li class="toc-h2">
+      <a href="#tabelas">9. Tabelas</a>
+    </li>
+    
+    <li class="toc-h3">
+      <a href="#tabela-com-alinhamento">9.1. Tabela com alinhamento</a>
+    </li>
+    
+    <li class="toc-h3">
+      <a href="#tabela-complexa">9.2. Tabela complexa</a>
+    </li>
+    
+    <li class="toc-h2">
+      <a href="#links-de-notas-de-rodape">10. Links de Notas de Rodapé</a>
+    </li>
+    
+    <li class="toc-h2">
+      <a href="#html-embutido-(se-suportado)">11. HTML Embutido (se suportado)</a>
+    </li>
+    
+    <li class="toc-h2">
+      <a href="#escaping-de-caracteres">12. Escaping de Caracteres</a>
+    </li>
+    
+    <li class="toc-h2">
+      <a href="#emojis-(github-style)">13. Emojis (GitHub style)</a>
+    </li>
+    
+    <li class="toc-h2">
+      <a href="#mencoes-e-referencias">14. Menções e Referências</a>
+    </li>
+    
+    <li class="toc-h2">
+      <a href="#listas-de-definicao-(se-suportado)">15. Listas de Definição (se suportado)</a>
+    </li>
+    
+    <li class="toc-h2">
+      <a href="#combinacoes-avancadas">16. Combinações Avançadas</a>
+    </li>
+    
+    <li class="toc-h3">
+      <a href="#lista-com-codigo-e-citacoes">16.1. Lista com código e citações</a>
+    </li>
+    
+    <li class="toc-h3">
+      <a href="#tabela-com-formatacao">16.2. Tabela com formatação</a>
+    </li>
+    
+    <li class="toc-h2">
+      <a href="#comentarios-html-(invisiveis)">17. Comentários HTML (invisíveis)</a>
+    </li>
+    
+    <li class="toc-h2">
+      <a href="#caracteres-especiais">18. Caracteres Especiais</a>
+    </li>
+    
+    <li class="toc-h2">
+      <a href="#quebra-de-pagina">19. Quebra de Página</a>
+    </li>
+    
+    <li class="toc-h2">
+      <a href="#conclusao">20. Conclusão</a>
+    </li>
+    
+  </ul>
+</div>
+
+<h1>Guia Completo de GitHub Flavored Markdown</h1>
+<p><mark>ste documento demonstra <strong>todos</strong> os elementos suportados pelo GitHub Flavored Markdown (GFM).</mark></p>
+<h2 id="enfase-e-formatacao-de-texto">Ênfase e Formatação de Texto</h2>
+<p><strong>Texto em negrito</strong> ou <strong>também negrito</strong></p>
+<p><em>Texto em itálico</em> ou <em>também itálico</em></p>
+<p><em><strong>Negrito e itálico combinados</strong></em></p>
+<p><s>Texto riscado (strikethrough)</s></p>
+<h2 id="paragrafos-e-quebras-de-linha">Parágrafos e Quebras de Linha</h2>
+<p>Este é um parágrafo normal. Basta deixar uma linha em branco para criar um novo parágrafo.</p>
+<p>Para forçar uma quebra de linha sem novo parágrafo,<br/>
+adicione dois espaços no final da linha.</p>
+<h2 id="links">Links</h2>
+<p><a href="https://exemplo.com">Link simples</a></p>
+<p><a href="https://exemplo.com" title="Passe o mouse aqui">Link com título</a></p>
+<p><a href="https://exemplo-autolink.com">https://exemplo-autolink.com</a></p>
+<p><a href="https://exemplo.com" title="Referência no rodapé">Link de referência</a></p>
+<h2 id="imagens">Imagens</h2>
+<p><figure><img alt="Estou assim" src="/images/corrida_ratos.gif"/><figcaption>Estou assim</figcaption></figure></p>
+<h2 id="listas">Listas</h2>
+<h3 id="lista-nao-ordenada">Lista não ordenada</h3>
+<ul>
+<li>
+<p>Item 1</p>
+</li>
+<li>
+<p>Item 2</p>
+</li>
+<li>
+<p>Item 3</p>
+<ul>
+<li>Subitem 3.1</li>
+<li>Subitem 3.2
+<ul>
+<li>Subitem 3.2.1</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Item 4</p>
+</li>
+<li>
+<p>Asterisco também funciona</p>
+</li>
+<li>
+<p>Outro item</p>
+</li>
+<li>
+<p>Sinal de mais também</p>
+</li>
+<li>
+<p>Mais um item</p>
+</li>
+</ul>
+<h3 id="lista-ordenada">Lista ordenada</h3>
+<ol>
+<li>Primeiro item</li>
+<li>Segundo item</li>
+<li>Terceiro item
+<ol>
+<li>Subitem 3.1</li>
+<li>Subitem 3.2</li>
+</ol>
+</li>
+<li>Quarto item</li>
+</ol>
+<h3 id="lista-de-tarefas-(task-list)">Lista de tarefas (Task List)</h3>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input checked="" class="task-list-item-checkbox" type="checkbox"/> Tarefa completa</li>
+<li class="task-list-item enabled"><input checked="" class="task-list-item-checkbox" type="checkbox"/> Outra tarefa feita</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"/> Tarefa pendente</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"/> Mais uma pendente</li>
+</ul>
+<h2 id="codigo">Código</h2>
+<h3 id="codigo-inline">Código inline</h3>
+<p>Use <code>const x = 10;</code> para código inline.</p>
+<p>Variáveis como <code>variavel</code> ou funções <code>funcao()</code> ficam destacadas.</p>
+<h3 id="blocos-de-codigo">Blocos de código</h3>
+<pre><code class="language-javascript">function exemplo() {
+  const mensagem = "Hello, World!";
+  console.log(mensagem);
+  return true;
+}
+</code></pre>
+<pre><code class="language-python">def exemplo():
+    mensagem = "Hello, World!"
+    print(mensagem)
+    return True
+</code></pre>
+<pre><code class="language-bash">#!/bin/bash
+echo "Hello, World!"
+ls -la
+</code></pre>
+<p>Bloco sem syntax highlighting:</p>
+<pre><code>Texto sem formatação especial
+Apenas monospace
+</code></pre>
+<h2 id="citacoes-(blockquotes)">Citações (Blockquotes)</h2>
+<blockquote>
+<p>Esta é uma citação simples.<br/>
+Pode ter múltiplas linhas.</p>
+</blockquote>
+<blockquote>
+<p>Citações podem conter <strong>formatação</strong> e <em>ênfase</em>.</p>
+<p>E até múltiplos parágrafos.</p>
+</blockquote>
+<blockquote>
+<p>Citações aninhadas:</p>
+<blockquote>
+<p>Segunda citação dentro da primeira</p>
+<blockquote>
+<p>E uma terceira!</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="linhas-horizontais">Linhas Horizontais</h2>
+<hr/>
+<hr/>
+<hr/>
+<h2 id="tabelas">Tabelas</h2>
+<table>
+<thead>
+<tr>
+<th>Coluna 1</th>
+<th>Coluna 2</th>
+<th>Coluna 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Linha 1</td>
+<td>Dado A</td>
+<td>Dado X</td>
+</tr>
+<tr>
+<td>Linha 2</td>
+<td>Dado B</td>
+<td>Dado Y</td>
+</tr>
+<tr>
+<td>Linha 3</td>
+<td>Dado C</td>
+<td>Dado Z</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabela-com-alinhamento">Tabela com alinhamento</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Esquerda</th>
+<th style="text-align:center">Centro</th>
+<th style="text-align:right">Direita</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">A1</td>
+<td style="text-align:center">B1</td>
+<td style="text-align:right">C1</td>
+</tr>
+<tr>
+<td style="text-align:left">A2</td>
+<td style="text-align:center">B2</td>
+<td style="text-align:right">C2</td>
+</tr>
+<tr>
+<td style="text-align:left">A3</td>
+<td style="text-align:center">B3</td>
+<td style="text-align:right">C3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabela-complexa">Tabela complexa</h3>
+<table>
+<thead>
+<tr>
+<th>Nome</th>
+<th>Idade</th>
+<th>Profissão</th>
+<th>Cidade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>João</td>
+<td>25</td>
+<td>Desenvolvedor</td>
+<td>São Paulo</td>
+</tr>
+<tr>
+<td>Maria</td>
+<td>30</td>
+<td>Designer</td>
+<td>Rio de Janeiro</td>
+</tr>
+<tr>
+<td>Pedro</td>
+<td>28</td>
+<td>Analista</td>
+<td>Belo Horizonte</td>
+</tr>
+</tbody>
+</table>
+<h2 id="links-de-notas-de-rodape">Links de Notas de Rodapé</h2>
+<p>Aqui está uma frase com uma nota de rodapé<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.</p>
+<p>Outra frase com nota de rodapé<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>.</p>
+<h2 id="html-embutido-(se-suportado)">HTML Embutido (se suportado)</h2>
+<div align="center">
+<strong>Texto centralizado com HTML</strong>
+</div>
+<details>
+<summary>Clique para expandir</summary>
+<p>Conteúdo escondido que aparece ao clicar.</p>
+</details>
+<h2 id="escaping-de-caracteres">Escaping de Caracteres</h2>
+<p>Use backslash para escapar:</p>
+<p>*Não é itálico*</p>
+<p># Não é título</p>
+<p>[Não é link](url)</p>
+<h2 id="emojis-(github-style)">Emojis (GitHub style)</h2>
+<p>😄 ❤️ 👍 🚀 🔥 🎉</p>
+<h2 id="mencoes-e-referencias">Menções e Referências</h2>
+<p>@usuario - mencionar usuário</p>
+<h1>123 - referência a issue</h1>
+<p>GH-123 - referência a issue do GitHub</p>
+<h2 id="listas-de-definicao-(se-suportado)">Listas de Definição (se suportado)</h2>
+<dl>
+<dt>Term 1</dt>
+<dd>Definition 1</dd>
+<dt>Term 2</dt>
+<dd>Definition 2</dd>
+</dl>
+<h2 id="combinacoes-avancadas">Combinações Avançadas</h2>
+<h3 id="lista-com-codigo-e-citacoes">Lista com código e citações</h3>
+<ol>
+<li>
+<p>Primeiro item com código:</p>
+<pre><code class="language-js">const x = 10;
+</code></pre>
+</li>
+<li>
+<p>Segundo item com citação:</p>
+<blockquote>
+<p>Uma citação dentro de lista</p>
+</blockquote>
+</li>
+<li>
+<p>Terceiro item com sublista:</p>
+<ul>
+<li>Subitem A</li>
+<li>Subitem B</li>
+</ul>
+</li>
+</ol>
+<h3 id="tabela-com-formatacao">Tabela com formatação</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Negrito</strong></th>
+<th><em>Itálico</em></th>
+<th><s>Riscado</s></th>
+<th><code>Código</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Dado 1</strong></td>
+<td><em>Dado 2</em></td>
+<td><s>Dado 3</s></td>
+<td><code>Dado 4</code></td>
+</tr>
+<tr>
+<td>Texto</td>
+<td>Texto</td>
+<td>Texto</td>
+<td>Texto</td>
+</tr>
+</tbody>
+</table>
+<h2 id="comentarios-html-(invisiveis)">Comentários HTML (invisíveis)</h2>
+<!-- Este é um comentário que não aparece no HTML renderizado -->
+<h2 id="caracteres-especiais">Caracteres Especiais</h2>
+<p>© ® ™ € £ ¥</p>
+<h2 id="quebra-de-pagina">Quebra de Página</h2>
+<hr/>
+<h2 id="conclusao">Conclusão</h2>
+<p>Este documento contém <strong>todos</strong> os elementos principais do GitHub Flavored Markdown:</p>
+<ul>
+<li>✅ Títulos (H1-H6)</li>
+<li>✅ Ênfase (negrito, itálico, riscado)</li>
+<li>✅ Links e imagens</li>
+<li>✅ Listas (ordenadas, não ordenadas, tarefas)</li>
+<li>✅ Código (inline e blocos)</li>
+<li>✅ Citações</li>
+<li>✅ Tabelas com alinhamento</li>
+<li>✅ Linhas horizontais</li>
+<li>✅ HTML embutido</li>
+<li>✅ Notas de rodapé</li>
+<li>✅ Escaping de caracteres</li>
+<li>✅ Emojis</li>
+</ul>
+<p><strong>Pronto para usar no seu blog!</strong></p>
+<hr class="footnotes-sep"/>
+<section class="footnotes">
+<ol class="footnotes-list">
+<li class="footnote-item" id="fn1"><p>Esta é a primeira nota de rodapé. <a class="footnote-backref" href="#fnref1">↩︎</a></p>
+</li>
+<li class="footnote-item" id="fn2"><p>Esta é a segunda nota de rodapé com mais detalhes. <a class="footnote-backref" href="#fnref2">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+<div class="home-link">
+  <a href="/">Home</a>
+</div>
+</main>
+</body>
+
+</html>
