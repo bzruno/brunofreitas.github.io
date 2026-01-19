@@ -1,306 +1,147 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guia Completo de GitHub Flavored Markdown - Meu Blog</title>
+  <title>Guia Definitivo de Markdown - 100% Completo - Meu Blog</title>
   <link rel="stylesheet" href="/static/style.css">
   <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 </head>
-
 <body>
-  <main>
-<h1><a href="/">Guia Completo de GitHub Flavored Markdown</a></h1>
+  <main class="markdown-body">
+    
+<h1><a href="/">Guia Definitivo de Markdown - 100% Completo</a></h1>
 
-<p class="subtitle"><em>Todos os elementos de sintaxe GFM em um único documento</em></p>
+<p class="subtitle"><em>Todos os elementos de sintaxe Markdown em um único documento de teste</em></p>
 
 <div class="article-meta">
-  <div>Publicado em: 03 - Jan - 2026</div>
+  <div>Publicado em: 17 - Jan - 2026</div>
   <div>
     Categoria: 
     
       
         <a href="/categorias/documentacao">Documentação</a>, 
       
-        <a href="/categorias/tutorial">Tutorial</a>
+        <a href="/categorias/tutorial">Tutorial</a>, 
+      
+        <a href="/categorias/referencia">Referência</a>
       
     
   </div>
   
 </div>
 
-<div class="toc">
-  <h2>Sumário</h2>
-  <ul class="toc-list">
-    
-    <li class="toc-h2">
-      <a href="#enfase-e-formatacao-de-texto">1. Ênfase e Formatação de Texto</a>
-    </li>
-    
-    <li class="toc-h2">
-      <a href="#paragrafos-e-quebras-de-linha">2. Parágrafos e Quebras de Linha</a>
-    </li>
-    
-    <li class="toc-h2">
-      <a href="#links">3. Links</a>
-    </li>
-    
-    <li class="toc-h2">
-      <a href="#imagens">4. Imagens</a>
-    </li>
-    
-    <li class="toc-h2">
-      <a href="#listas">5. Listas</a>
-    </li>
-    
-    <li class="toc-h3">
-      <a href="#lista-nao-ordenada">5.1. Lista não ordenada</a>
-    </li>
-    
-    <li class="toc-h3">
-      <a href="#lista-ordenada">5.2. Lista ordenada</a>
-    </li>
-    
-    <li class="toc-h3">
-      <a href="#lista-de-tarefas-(task-list)">5.3. Lista de tarefas (Task List)</a>
-    </li>
-    
-    <li class="toc-h2">
-      <a href="#codigo">6. Código</a>
-    </li>
-    
-    <li class="toc-h3">
-      <a href="#codigo-inline">6.1. Código inline</a>
-    </li>
-    
-    <li class="toc-h3">
-      <a href="#blocos-de-codigo">6.2. Blocos de código</a>
-    </li>
-    
-    <li class="toc-h2">
-      <a href="#citacoes-(blockquotes)">7. Citações (Blockquotes)</a>
-    </li>
-    
-    <li class="toc-h2">
-      <a href="#linhas-horizontais">8. Linhas Horizontais</a>
-    </li>
-    
-    <li class="toc-h2">
-      <a href="#tabelas">9. Tabelas</a>
-    </li>
-    
-    <li class="toc-h3">
-      <a href="#tabela-com-alinhamento">9.1. Tabela com alinhamento</a>
-    </li>
-    
-    <li class="toc-h3">
-      <a href="#tabela-complexa">9.2. Tabela complexa</a>
-    </li>
-    
-    <li class="toc-h2">
-      <a href="#links-de-notas-de-rodape">10. Links de Notas de Rodapé</a>
-    </li>
-    
-    <li class="toc-h2">
-      <a href="#html-embutido-(se-suportado)">11. HTML Embutido (se suportado)</a>
-    </li>
-    
-    <li class="toc-h2">
-      <a href="#escaping-de-caracteres">12. Escaping de Caracteres</a>
-    </li>
-    
-    <li class="toc-h2">
-      <a href="#emojis-(github-style)">13. Emojis (GitHub style)</a>
-    </li>
-    
-    <li class="toc-h2">
-      <a href="#mencoes-e-referencias">14. Menções e Referências</a>
-    </li>
-    
-    <li class="toc-h2">
-      <a href="#listas-de-definicao-(se-suportado)">15. Listas de Definição (se suportado)</a>
-    </li>
-    
-    <li class="toc-h2">
-      <a href="#combinacoes-avancadas">16. Combinações Avançadas</a>
-    </li>
-    
-    <li class="toc-h3">
-      <a href="#lista-com-codigo-e-citacoes">16.1. Lista com código e citações</a>
-    </li>
-    
-    <li class="toc-h3">
-      <a href="#tabela-com-formatacao">16.2. Tabela com formatação</a>
-    </li>
-    
-    <li class="toc-h2">
-      <a href="#comentarios-html-(invisiveis)">17. Comentários HTML (invisíveis)</a>
-    </li>
-    
-    <li class="toc-h2">
-      <a href="#caracteres-especiais">18. Caracteres Especiais</a>
-    </li>
-    
-    <li class="toc-h2">
-      <a href="#quebra-de-pagina">19. Quebra de Página</a>
-    </li>
-    
-    <li class="toc-h2">
-      <a href="#conclusao">20. Conclusão</a>
-    </li>
-    
-  </ul>
-</div>
-
-<h1>Guia Completo de GitHub Flavored Markdown</h1>
-<p><mark>ste documento demonstra <strong>todos</strong> os elementos suportados pelo GitHub Flavored Markdown (GFM).</mark></p>
-<h2 id="enfase-e-formatacao-de-texto">Ênfase e Formatação de Texto</h2>
-<p><strong>Texto em negrito</strong> ou <strong>também negrito</strong></p>
-<p><em>Texto em itálico</em> ou <em>também itálico</em></p>
-<p><em><strong>Negrito e itálico combinados</strong></em></p>
-<p><s>Texto riscado (strikethrough)</s></p>
-<h2 id="paragrafos-e-quebras-de-linha">Parágrafos e Quebras de Linha</h2>
-<p>Este é um parágrafo normal. Basta deixar uma linha em branco para criar um novo parágrafo.</p>
-<p>Para forçar uma quebra de linha sem novo parágrafo,<br/>
-adicione dois espaços no final da linha.</p>
-<h2 id="links">Links</h2>
-<p><a href="https://exemplo.com">Link simples</a></p>
-<p><a href="https://exemplo.com" title="Passe o mouse aqui">Link com título</a></p>
-<p><a href="https://exemplo-autolink.com">https://exemplo-autolink.com</a></p>
-<p><a href="https://exemplo.com" title="Referência no rodapé">Link de referência</a></p>
-<h2 id="imagens">Imagens</h2>
-<p><figure><img alt="Estou assim" src="/images/corrida_ratos.gif"/><figcaption>Estou assim</figcaption></figure></p>
-<h2 id="listas">Listas</h2>
-<h3 id="lista-nao-ordenada">Lista não ordenada</h3>
+<nav class="toc" id="toc"><ol><li><a href="#teste-completo-de-markdown">Teste Completo de Markdown</a></li><li><a href="#tipografia-b%C3%A1sica">Tipografia Básica</a></li><li><a href="#listas">Listas</a><ol><li><a href="#lista-n%C3%A3o-ordenada">Lista não ordenada</a></li><li><a href="#lista-ordenada">Lista ordenada</a></li><li><a href="#task-list">Task list</a></li><li><a href="#definition-list">Definition list</a></li></ol></li><li><a href="#c%C3%B3digo">Código</a></li><li><a href="#cita%C3%A7%C3%B5es">Citações</a></li><li><a href="#tabelas">Tabelas</a><ol><li><a href="#tabela-simples">Tabela simples</a></li><li><a href="#tabela-com-alinhamento">Tabela com alinhamento</a></li><li><a href="#tabela-multiline-(markdown-it-multimd-table)">Tabela multiline (markdown-it-multimd-table)</a></li></ol></li><li><a href="#matem%C3%A1tica-(katex)">Matemática (KaTeX)</a><ol><li><a href="#inline-math">Inline math</a></li><li><a href="#display-math-(bloco)">Display math (bloco)</a></li><li><a href="#f%C3%B3rmulas-complexas">Fórmulas complexas</a></li></ol></li><li><a href="#imagens">Imagens</a><ol><li><a href="#imagem-simples">Imagem simples</a></li><li><a href="#imagem-com-tamanho-customizado">Imagem com tamanho customizado</a></li><li><a href="#imagem-com-atributos">Imagem com atributos</a></li></ol></li><li><a href="#containers-customizados">Containers Customizados</a></li><li><a href="#footnotes">Footnotes</a></li><li><a href="#emojis">Emojis</a></li><li><a href="#abrevia%C3%A7%C3%B5es">Abreviações</a></li><li><a href="#v%C3%ADdeos">Vídeos</a><ol><li><a href="#youtube">YouTube</a></li><li><a href="#vimeo">Vimeo</a></li></ol></li><li><a href="#detalhes%2Fspoilers">Detalhes/Spoilers</a><ol><li><a href="#conte%C3%BAdo-t%C3%A9cnico">Conteúdo técnico</a></li></ol></li><li><a href="#atributos-customizados">Atributos Customizados</a><ol><li><a href="#heading-com-id-customizado">Heading com ID customizado</a></li></ol></li><li><a href="#caracteres-especiais-e-escapamento">Caracteres Especiais e Escapamento</a></li><li><a href="#markdown-aninhado-complexo">Markdown Aninhado Complexo</a></li><li><a href="#teste-de-links">Teste de Links</a></li><li><a href="#teste-final">Teste Final</a></li></ol></nav><h2 id="teste-completo-de-markdown" tabindex="-1"><a class="header-anchor" href="#teste-completo-de-markdown"><span>Teste Completo de Markdown</span></a></h2>
+<p>Este arquivo testa <strong>todas</strong> as funcionalidades do seu gerador.</p>
+<h2 id="tipografia-b%C3%A1sica" tabindex="-1"><a class="header-anchor" href="#tipografia-b%C3%A1sica"><span>Tipografia Básica</span></a></h2>
+<p>Texto normal com <em>itálico</em>, <strong>negrito</strong>, <em><strong>negrito itálico</strong></em>, <s>riscado</s>, <mark>destacado</mark>, H<sub>2</sub>O, X<sup>2</sup>, e <ins>inserido</ins>.</p>
+<p><a href="https://example.com" rel="noopener noreferrer" target="_blank">Link externo</a> e <a href="#se%C3%A7%C3%A3o-de-teste">link interno</a>.</p>
+<hr/>
+<h2 id="listas" tabindex="-1"><a class="header-anchor" href="#listas"><span>Listas</span></a></h2>
+<h3 id="lista-n%C3%A3o-ordenada" tabindex="-1"><a class="header-anchor" href="#lista-n%C3%A3o-ordenada"><span>Lista não ordenada</span></a></h3>
 <ul>
-<li>
-<p>Item 1</p>
-</li>
-<li>
-<p>Item 2</p>
-</li>
-<li>
-<p>Item 3</p>
+<li>Item 1</li>
+<li>Item 2
 <ul>
-<li>Subitem 3.1</li>
-<li>Subitem 3.2
-<ul>
-<li>Subitem 3.2.1</li>
+<li>Subitem 2.1</li>
+<li>Subitem 2.2</li>
 </ul>
 </li>
+<li>Item 3</li>
 </ul>
-</li>
-<li>
-<p>Item 4</p>
-</li>
-<li>
-<p>Asterisco também funciona</p>
-</li>
-<li>
-<p>Outro item</p>
-</li>
-<li>
-<p>Sinal de mais também</p>
-</li>
-<li>
-<p>Mais um item</p>
-</li>
-</ul>
-<h3 id="lista-ordenada">Lista ordenada</h3>
+<h3 id="lista-ordenada" tabindex="-1"><a class="header-anchor" href="#lista-ordenada"><span>Lista ordenada</span></a></h3>
 <ol>
-<li>Primeiro item</li>
-<li>Segundo item</li>
-<li>Terceiro item
+<li>Primeiro</li>
+<li>Segundo
 <ol>
-<li>Subitem 3.1</li>
-<li>Subitem 3.2</li>
+<li>Sub-segundo</li>
+<li>Sub-segundo-bis</li>
 </ol>
 </li>
-<li>Quarto item</li>
+<li>Terceiro</li>
 </ol>
-<h3 id="lista-de-tarefas-(task-list)">Lista de tarefas (Task List)</h3>
+<h3 id="task-list" tabindex="-1"><a class="header-anchor" href="#task-list"><span>Task list</span></a></h3>
 <ul class="contains-task-list">
-<li class="task-list-item enabled"><input checked="" class="task-list-item-checkbox" type="checkbox"/> Tarefa completa</li>
-<li class="task-list-item enabled"><input checked="" class="task-list-item-checkbox" type="checkbox"/> Outra tarefa feita</li>
-<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"/> Tarefa pendente</li>
-<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"/> Mais uma pendente</li>
+<li class="task-list-item enabled"><input checked="" class="task-list-item-checkbox" id="task-item-7849387" type="checkbox"/><label class="task-list-item-label" for="task-item-7849387"> Tarefa completa</label></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" id="task-item-7585319" type="checkbox"/><label class="task-list-item-label" for="task-item-7585319"> Tarefa pendente</label></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" id="task-item-6551460" type="checkbox"/><label class="task-list-item-label" for="task-item-6551460"> Outra tarefa</label></li>
 </ul>
-<h2 id="codigo">Código</h2>
-<h3 id="codigo-inline">Código inline</h3>
-<p>Use <code>const x = 10;</code> para código inline.</p>
-<p>Variáveis como <code>variavel</code> ou funções <code>funcao()</code> ficam destacadas.</p>
-<h3 id="blocos-de-codigo">Blocos de código</h3>
-<pre><code class="language-javascript">function exemplo() {
-  const mensagem = "Hello, World!";
-  console.log(mensagem);
-  return true;
+<h3 id="definition-list" tabindex="-1"><a class="header-anchor" href="#definition-list"><span>Definition list</span></a></h3>
+<dl>
+<dt>Termo 1</dt>
+<dd>Definição do termo 1</dd>
+<dt>Termo 2</dt>
+<dd>Primeira definição</dd>
+<dd>Segunda definição</dd>
+</dl>
+<hr/>
+<h2 id="c%C3%B3digo" tabindex="-1"><a class="header-anchor" href="#c%C3%B3digo"><span>Código</span></a></h2>
+<p>Código inline: <code>const x = 42;</code></p>
+<p>Bloco de código com syntax highlighting:</p>
+<pre class="hljs"><code><span class="hljs-keyword">function</span> <span class="hljs-title function_">fibonacci</span>(<span class="hljs-params">n</span>) {
+  <span class="hljs-keyword">if</span> (n &lt;= <span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> n;
+  <span class="hljs-keyword">return</span> <span class="hljs-title function_">fibonacci</span>(n - <span class="hljs-number">1</span>) + <span class="hljs-title function_">fibonacci</span>(n - <span class="hljs-number">2</span>);
 }
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">fibonacci</span>(<span class="hljs-number">10</span>)); <span class="hljs-comment">// 55</span>
 </code></pre>
-<pre><code class="language-python">def exemplo():
-    mensagem = "Hello, World!"
-    print(mensagem)
-    return True
+<pre class="hljs"><code><span class="hljs-keyword">def</span> <span class="hljs-title function_">quicksort</span>(<span class="hljs-params">arr</span>):
+    <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(arr) &lt;= <span class="hljs-number">1</span>:
+        <span class="hljs-keyword">return</span> arr
+    pivot = arr[<span class="hljs-built_in">len</span>(arr) // <span class="hljs-number">2</span>]
+    left = [x <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> arr <span class="hljs-keyword">if</span> x &lt; pivot]
+    middle = [x <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> arr <span class="hljs-keyword">if</span> x == pivot]
+    right = [x <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> arr <span class="hljs-keyword">if</span> x &gt; pivot]
+    <span class="hljs-keyword">return</span> quicksort(left) + middle + quicksort(right)
+
+<span class="hljs-built_in">print</span>(quicksort([<span class="hljs-number">3</span>,<span class="hljs-number">6</span>,<span class="hljs-number">8</span>,<span class="hljs-number">10</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>]))
 </code></pre>
-<pre><code class="language-bash">#!/bin/bash
-echo "Hello, World!"
-ls -la
-</code></pre>
-<p>Bloco sem syntax highlighting:</p>
-<pre><code>Texto sem formatação especial
-Apenas monospace
-</code></pre>
-<h2 id="citacoes-(blockquotes)">Citações (Blockquotes)</h2>
-<blockquote>
-<p>Esta é uma citação simples.<br/>
+<hr/>
+<h2 id="cita%C3%A7%C3%B5es" tabindex="-1"><a class="header-anchor" href="#cita%C3%A7%C3%B5es"><span>Citações</span></a></h2>
+<blockquote class="blockquote">
+<p>Esta é uma citação simples.
 Pode ter múltiplas linhas.</p>
 </blockquote>
-<blockquote>
-<p>Citações podem conter <strong>formatação</strong> e <em>ênfase</em>.</p>
-<p>E até múltiplos parágrafos.</p>
-</blockquote>
-<blockquote>
-<p>Citações aninhadas:</p>
-<blockquote>
-<p>Segunda citação dentro da primeira</p>
-<blockquote>
-<p>E uma terceira!</p>
+<blockquote class="blockquote">
+<p><strong>Citação aninhada:</strong></p>
+<blockquote class="blockquote">
+<p>Nível 2 de citação</p>
+<blockquote class="blockquote">
+<p>Nível 3</p>
 </blockquote>
 </blockquote>
 </blockquote>
-<h2 id="linhas-horizontais">Linhas Horizontais</h2>
 <hr/>
-<hr/>
-<hr/>
-<h2 id="tabelas">Tabelas</h2>
-<table>
+<h2 id="tabelas" tabindex="-1"><a class="header-anchor" href="#tabelas"><span>Tabelas</span></a></h2>
+<h3 id="tabela-simples" tabindex="-1"><a class="header-anchor" href="#tabela-simples"><span>Tabela simples</span></a></h3>
+<table class="markdown-table">
 <thead>
 <tr>
-<th>Coluna 1</th>
-<th>Coluna 2</th>
-<th>Coluna 3</th>
+<th>Nome</th>
+<th>Idade</th>
+<th>Cidade</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Linha 1</td>
-<td>Dado A</td>
-<td>Dado X</td>
+<td>Alice</td>
+<td>30</td>
+<td>São Paulo</td>
 </tr>
 <tr>
-<td>Linha 2</td>
-<td>Dado B</td>
-<td>Dado Y</td>
+<td>Bob</td>
+<td>25</td>
+<td>Rio de Janeiro</td>
 </tr>
 <tr>
-<td>Linha 3</td>
-<td>Dado C</td>
-<td>Dado Z</td>
+<td>Carol</td>
+<td>28</td>
+<td>Belo Horizonte</td>
 </tr>
 </tbody>
 </table>
-<h3 id="tabela-com-alinhamento">Tabela com alinhamento</h3>
-<table>
+<h3 id="tabela-com-alinhamento" tabindex="-1"><a class="header-anchor" href="#tabela-com-alinhamento"><span>Tabela com alinhamento</span></a></h3>
+<table class="markdown-table">
 <thead>
 <tr>
 <th style="text-align:left">Esquerda</th>
@@ -326,150 +167,255 @@ Pode ter múltiplas linhas.</p>
 </tr>
 </tbody>
 </table>
-<h3 id="tabela-complexa">Tabela complexa</h3>
-<table>
+<h3 id="tabela-multiline-(markdown-it-multimd-table)" tabindex="-1"><a class="header-anchor" href="#tabela-multiline-(markdown-it-multimd-table)"><span>Tabela multiline (markdown-it-multimd-table)</span></a></h3>
+<table class="markdown-table">
 <thead>
 <tr>
-<th>Nome</th>
-<th>Idade</th>
-<th>Profissão</th>
-<th>Cidade</th>
+<th>Coluna 1</th>
+<th style="text-align:center">Coluna 2</th>
+<th>Coluna 3</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>João</td>
-<td>25</td>
-<td>Desenvolvedor</td>
-<td>São Paulo</td>
+<td>
+<p>Célula longa
+com quebra</p>
+</td>
 </tr>
 <tr>
-<td>Maria</td>
-<td>30</td>
-<td>Designer</td>
-<td>Rio de Janeiro</td>
-</tr>
-<tr>
-<td>Pedro</td>
-<td>28</td>
-<td>Analista</td>
-<td>Belo Horizonte</td>
+<td>Normal</td>
+<td style="text-align:center">Texto</td>
+<td>Fim</td>
 </tr>
 </tbody>
 </table>
-<h2 id="links-de-notas-de-rodape">Links de Notas de Rodapé</h2>
-<p>Aqui está uma frase com uma nota de rodapé<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.</p>
-<p>Outra frase com nota de rodapé<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>.</p>
-<h2 id="html-embutido-(se-suportado)">HTML Embutido (se suportado)</h2>
-<div align="center">
-<strong>Texto centralizado com HTML</strong>
+<hr/>
+<h2 id="matem%C3%A1tica-(katex)" tabindex="-1"><a class="header-anchor" href="#matem%C3%A1tica-(katex)"><span>Matemática (KaTeX)</span></a></h2>
+<h3 id="inline-math" tabindex="-1"><a class="header-anchor" href="#inline-math"><span>Inline math</span></a></h3>
+<p>A fórmula de Bhaskara é <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mfrac><mrow><mo>−</mo><mi>b</mi><mo>±</mo><msqrt><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><mi>a</mi><mi>c</mi></mrow></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.3845em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0395em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mathnormal mtight">a</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">b</span><span class="mbin mtight">±</span><span class="mord sqrt mtight"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9221em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mtight" style="padding-left:0.833em;"><span class="mord mtight"><span class="mord mathnormal mtight">b</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7463em;"><span style="top:-2.786em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mbin mtight">−</span><span class="mord mtight">4</span><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight">c</span></span></span><span style="top:-2.8821em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail mtight" style="min-width:0.853em;height:1.08em;"><svg height="1.08em" preserveaspectratio="xMinYMin slice" viewbox="0 0 400000 1080" width="400em" xmlns="http://www.w3.org/2000/svg"><path d="M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1179em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></eq> e resolve equações quadráticas.</p>
+<p>Einstein provou que <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">E = mc^2</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord mathnormal">m</span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></eq> relaciona energia e massa.</p>
+<h3 id="display-math-(bloco)" tabindex="-1"><a class="header-anchor" href="#display-math-(bloco)"><span>Display math (bloco)</span></a></h3>
+<section><eqn><span class="katex-display"><span class="katex"><span class="katex-mathml"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><msup><mi>e</mi><mrow><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msup><mi>d</mi><mi>x</mi><mo>=</mo><msqrt><mi>π</mi></msqrt></mrow><annotation encoding="application/x-tex">
+\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
+</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:2.3846em;vertical-align:-0.9703em;"></span><span class="mop"><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4143em;"><span style="top:-1.7881em;margin-left:-0.4445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">∞</span></span></span></span><span style="top:-3.8129em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∞</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9703em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.0369em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-2.931em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.1908em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8492em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span><span style="top:-2.8092em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg height="1.08em" preserveaspectratio="xMinYMin slice" viewbox="0 0 400000 1080" width="400em" xmlns="http://www.w3.org/2000/svg"><path d="M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1908em;"><span></span></span></span></span></span></span></span></span></span></eqn></section><section><eqn><span class="katex-display"><span class="katex"><span class="katex-mathml"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo fence="true">(</mo><mtable columnalign="center center" columnspacing="1em" rowspacing="0.16em"><mtr><mtd><mstyle displaystyle="false" scriptlevel="0"><mi>a</mi></mstyle></mtd><mtd><mstyle displaystyle="false" scriptlevel="0"><mi>b</mi></mstyle></mtd></mtr><mtr><mtd><mstyle displaystyle="false" scriptlevel="0"><mi>c</mi></mstyle></mtd><mtd><mstyle displaystyle="false" scriptlevel="0"><mi>d</mi></mstyle></mtd></mtr></mtable><mo fence="true">)</mo></mrow><mrow><mo fence="true">(</mo><mtable columnalign="center" columnspacing="1em" rowspacing="0.16em"><mtr><mtd><mstyle displaystyle="false" scriptlevel="0"><mi>x</mi></mstyle></mtd></mtr><mtr><mtd><mstyle displaystyle="false" scriptlevel="0"><mi>y</mi></mstyle></mtd></mtr></mtable><mo fence="true">)</mo></mrow><mo>=</mo><mrow><mo fence="true">(</mo><mtable columnalign="center" columnspacing="1em" rowspacing="0.16em"><mtr><mtd><mstyle displaystyle="false" scriptlevel="0"><mrow><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi><mi>y</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle displaystyle="false" scriptlevel="0"><mrow><mi>c</mi><mi>x</mi><mo>+</mo><mi>d</mi><mi>y</mi></mrow></mstyle></mtd></mtr></mtable><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">
+\begin{pmatrix}
+a &amp; b \\
+c &amp; d
+\end{pmatrix}
+\begin{pmatrix}
+x \\
+y
+\end{pmatrix}
+=
+\begin{pmatrix}
+ax + by \\
+cx + dy
+\end{pmatrix}
+</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:2.4em;vertical-align:-0.95em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">a</span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.95em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">b</span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.95em;"><span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">x</span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.95em;"><span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.4em;vertical-align:-0.95em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">b</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.95em;"><span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span></span></span></span></span></eqn></section><h3 id="f%C3%B3rmulas-complexas" tabindex="-1"><a class="header-anchor" href="#f%C3%B3rmulas-complexas"><span>Fórmulas complexas</span></a></h3>
+<section><eqn><span class="katex-display"><span class="katex"><span class="katex-mathml"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∇</mi><mo>×</mo><mover accent="true"><mi mathvariant="bold">B</mi><mo>⃗</mo></mover><mo>−</mo><mtext> </mtext><mfrac><mn>1</mn><mi>c</mi></mfrac><mtext> </mtext><mfrac><mrow><mi mathvariant="normal">∂</mi><mover accent="true"><mi mathvariant="bold">E</mi><mo>⃗</mo></mover></mrow><mrow><mi mathvariant="normal">∂</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>4</mn><mi>π</mi></mrow><mi>c</mi></mfrac><mover accent="true"><mi mathvariant="bold">j</mi><mo>⃗</mo></mover></mrow><annotation encoding="application/x-tex">
+\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} = \frac{4\pi}{c}\vec{\mathbf{j}}
+</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord">∇</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0524em;vertical-align:-0.0833em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9691em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">B</span></span><span style="top:-3.2551em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1522em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg height="0.714em" preserveaspectratio="xMinYMin" style="width:0.471em" viewbox="0 0 471 714" width="0.471em" xmlns="http://www.w3.org/2000/svg"><path d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
+3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
+10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
+-1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
+-7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
+H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
+c-16-25.333-24-45-24-59z"></path></svg></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.3321em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">c</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6461em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord mathnormal">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9691em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">E</span></span><span style="top:-3.2551em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1522em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg height="0.714em" preserveaspectratio="xMinYMin" style="width:0.471em" viewbox="0 0 471 714" width="0.471em" xmlns="http://www.w3.org/2000/svg"><path d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
+3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
+10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
+-1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
+-7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
+H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
+c-16-25.333-24-45-24-59z"></path></svg></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">c</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">4</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9774em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">j</span></span><span style="top:-3.2634em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2355em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg height="0.714em" preserveaspectratio="xMinYMin" style="width:0.471em" viewbox="0 0 471 714" width="0.471em" xmlns="http://www.w3.org/2000/svg"><path d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
+3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
+10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
+-1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
+-7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
+H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
+c-16-25.333-24-45-24-59z"></path></svg></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1944em;"><span></span></span></span></span></span></span></span></span></span></eqn></section><section><eqn><span class="katex-display"><span class="katex"><span class="katex-mathml"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mfrac><mn>1</mn><msup><mi>n</mi><mn>2</mn></msup></mfrac><mo>=</mo><mfrac><msup><mi>π</mi><mn>2</mn></msup><mn>6</mn></mfrac></mrow><annotation encoding="application/x-tex">
+\sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}
+</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:2.9185em;vertical-align:-1.2671em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6514em;"><span style="top:-1.8829em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∞</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2671em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1771em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4911em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">6</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></eqn></section><hr/>
+<h2 id="imagens" tabindex="-1"><a class="header-anchor" href="#imagens"><span>Imagens</span></a></h2>
+<h3 id="imagem-simples" tabindex="-1"><a class="header-anchor" href="#imagem-simples"><span>Imagem simples</span></a></h3>
+<figure><img alt="" src="https://via.placeholder.com/600x300/7aa2f7/ffffff?text=Imagem+de+Teste"/><figcaption>Logo de exemplo</figcaption></figure>
+<h3 id="imagem-com-tamanho-customizado" tabindex="-1"><a class="header-anchor" href="#imagem-com-tamanho-customizado"><span>Imagem com tamanho customizado</span></a></h3>
+<figure><img alt="" height="200" src="https://via.placeholder.com/300x200/9ece6a/000000?text=300x200" width="300"/><figcaption>Thumbnail</figcaption></figure>
+<h3 id="imagem-com-atributos" tabindex="-1"><a class="header-anchor" href="#imagem-com-atributos"><span>Imagem com atributos</span></a></h3>
+<figure><img alt="" class="custom-class" id="my-id" src="https://via.placeholder.com/400x200/bb9af7/ffffff?text=Com+Classe"/><figcaption>Logo com classe</figcaption></figure>
+<hr/>
+<h2 id="containers-customizados" tabindex="-1"><a class="header-anchor" href="#containers-customizados"><span>Containers Customizados</span></a></h2>
+<div class="container-note"><div class="container-title">Nota Importante</div>
+<p>Este é um container de nota. Útil para destacar informações.</p>
 </div>
-<details>
-<summary>Clique para expandir</summary>
-<p>Conteúdo escondido que aparece ao clicar.</p>
-</details>
-<h2 id="escaping-de-caracteres">Escaping de Caracteres</h2>
-<p>Use backslash para escapar:</p>
-<p>*Não é itálico*</p>
-<p># Não é título</p>
-<p>[Não é link](url)</p>
-<h2 id="emojis-(github-style)">Emojis (GitHub style)</h2>
-<p>😄 ❤️ 👍 🚀 🔥 🎉</p>
-<h2 id="mencoes-e-referencias">Menções e Referências</h2>
-<p>@usuario - mencionar usuário</p>
-<h1>123 - referência a issue</h1>
-<p>GH-123 - referência a issue do GitHub</p>
-<h2 id="listas-de-definicao-(se-suportado)">Listas de Definição (se suportado)</h2>
-<dl>
-<dt>Term 1</dt>
-<dd>Definition 1</dd>
-<dt>Term 2</dt>
-<dd>Definition 2</dd>
-</dl>
-<h2 id="combinacoes-avancadas">Combinações Avançadas</h2>
-<h3 id="lista-com-codigo-e-citacoes">Lista com código e citações</h3>
-<ol>
-<li>
-<p>Primeiro item com código:</p>
-<pre><code class="language-js">const x = 10;
-</code></pre>
-</li>
-<li>
-<p>Segundo item com citação:</p>
-<blockquote>
-<p>Uma citação dentro de lista</p>
-</blockquote>
-</li>
-<li>
-<p>Terceiro item com sublista:</p>
+<div class="container-tip"><div class="container-title">Dica</div>
+<p>Use containers para organizar melhor seu conteúdo!</p>
+</div>
+<div class="container-warning"><div class="container-title">Atenção</div>
+<p>Cuidado ao executar comandos desconhecidos.</p>
+</div>
+<div class="container-danger"><div class="container-title">Perigo</div>
+<p>Não delete seu diretório raiz!</p>
+</div>
+<div class="container-success"><div class="container-title">Sucesso</div>
+<p>Operação completada com êxito!</p>
+</div>
+<div class="container-info"><div class="container-title">Informação</div>
+<p>Containers suportam <strong>markdown</strong> dentro deles:</p>
 <ul>
-<li>Subitem A</li>
-<li>Subitem B</li>
+<li>Item 1</li>
+<li>Item 2</li>
+</ul>
+<pre class="hljs"><code><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">"Código também!"</span>);
+</code></pre>
+</div>
+<div class="container-important">
+<p>Container sem título também funciona.</p>
+</div>
+<hr/>
+<h2 id="footnotes" tabindex="-1"><a class="header-anchor" href="#footnotes"><span>Footnotes</span></a></h2>
+<p>Aqui está um texto com nota de rodapé<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>. E outra referência<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>.</p>
+<hr/>
+<h2 id="emojis" tabindex="-1"><a class="header-anchor" href="#emojis"><span>Emojis</span></a></h2>
+<p>Suporte a emojis: 😄 ❤️ 👍 🚀 🎉 🔥</p>
+<p>Também funciona: 😀 💻 🚀 ⚡ 🎉</p>
+<hr/>
+<h2 id="abrevia%C3%A7%C3%B5es" tabindex="-1"><a class="header-anchor" href="#abrevia%C3%A7%C3%B5es"><span>Abreviações</span></a></h2>
+<p>O <abbr title="Hyper Text Markup Language">HTML</abbr> é legal.</p>
+<hr/>
+<h2 id="v%C3%ADdeos" tabindex="-1"><a class="header-anchor" href="#v%C3%ADdeos"><span>Vídeos</span></a></h2>
+<h3 id="youtube" tabindex="-1"><a class="header-anchor" href="#youtube"><span>YouTube</span></a></h3>
+<p><div class="embed-responsive embed-responsive-16by9"><iframe allowfullscreen="" class="embed-responsive-item youtube-player" frameborder="0" height="390" mozallowfullscreen="" src="https://www.youtube.com/embed/dQw4w9WgXcQ" type="text/html" webkitallowfullscreen="" width="640"></iframe></div></p>
+<h3 id="vimeo" tabindex="-1"><a class="header-anchor" href="#vimeo"><span>Vimeo</span></a></h3>
+<p><div class="embed-responsive embed-responsive-16by9"><iframe allowfullscreen="" class="embed-responsive-item vimeo-player" frameborder="0" height="281" mozallowfullscreen="" src="https://player.vimeo.com/video/123456789" type="text/html" webkitallowfullscreen="" width="500"></iframe></div></p>
+<hr/>
+<h2 id="detalhes%2Fspoilers" tabindex="-1"><a class="header-anchor" href="#detalhes%2Fspoilers"><span>Detalhes/Spoilers</span></a></h2>
+<details class="spoiler">
+<summary>Clique para revelar spoiler</summary>
+<p>Este é o conteúdo oculto que será revelado quando o usuário clicar.</p>
+<p>Pode conter:</p>
+<ul>
+<li><strong>Formatação</strong></li>
+<li><code>Código</code></li>
+<li>Qualquer markdown válido</li>
+</ul>
+<pre class="hljs"><code><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">"Surpresa!"</span>);
+</code></pre>
+</details>
+<details class="details-block">
+<summary>Seção colapsável técnica</summary>
+<h3 id="conte%C3%BAdo-t%C3%A9cnico" tabindex="-1"><a class="header-anchor" href="#conte%C3%BAdo-t%C3%A9cnico"><span>Conteúdo técnico</span></a></h3>
+<p>Aqui você pode colocar documentação técnica que fica oculta por padrão.</p>
+<section><eqn><span class="katex-display"><span class="katex"><span class="katex-mathml"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi>x</mi></msubsup><msup><mi>e</mi><mrow><mo>−</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></msup><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">
+f(x) = \int_{-\infty}^{x} e^{-t^2} dt
+</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.3846em;vertical-align:-0.9703em;"></span><span class="mop"><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4143em;"><span style="top:-1.7881em;margin-left:-0.4445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">∞</span></span></span></span><span style="top:-3.8129em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9703em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.0369em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-2.931em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span></span></span></span></span></eqn></section></details>
+<hr/>
+<h2 id="atributos-customizados" tabindex="-1"><a class="header-anchor" href="#atributos-customizados"><span>Atributos Customizados</span></a></h2>
+<h3 id="secao-de-teste" tabindex="-1"><a class="header-anchor" href="#secao-de-teste"><span>Heading com ID customizado</span></a></h3>
+<p class="custom-para" id="para-1">Parágrafo com classe e ID</p>
+<p><a href="https://example.com" rel="noopener noreferrer" target="_blank">Link com atributos</a></p>
+<hr/>
+<h2 id="caracteres-especiais-e-escapamento" tabindex="-1"><a class="header-anchor" href="#caracteres-especiais-e-escapamento"><span>Caracteres Especiais e Escapamento</span></a></h2>
+<p>Backslash: \
+Asterisco: *
+Underline: _
+Colchetes: []
+Parênteses: ()</p>
+<p>Tipografia automática:</p>
+<ul>
+<li>Aspas: “Olá” → “Olá”</li>
+<li>Apóstrofo: don’t → don’t</li>
+<li>Reticências: … → …</li>
+<li>Em dash: – → –</li>
+<li>En dash: — → —</li>
+</ul>
+<hr/>
+<h2 id="markdown-aninhado-complexo" tabindex="-1"><a class="header-anchor" href="#markdown-aninhado-complexo"><span>Markdown Aninhado Complexo</span></a></h2>
+<blockquote class="blockquote">
+<p><strong>Citação com lista:</strong></p>
+<ol>
+<li>Item um</li>
+<li>Item dois
+<ul>
+<li>Subitem</li>
+<li>Outro subitem</li>
 </ul>
 </li>
 </ol>
-<h3 id="tabela-com-formatacao">Tabela com formatação</h3>
-<table>
-<thead>
-<tr>
-<th><strong>Negrito</strong></th>
-<th><em>Itálico</em></th>
-<th><s>Riscado</s></th>
-<th><code>Código</code></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Dado 1</strong></td>
-<td><em>Dado 2</em></td>
-<td><s>Dado 3</s></td>
-<td><code>Dado 4</code></td>
-</tr>
-<tr>
-<td>Texto</td>
-<td>Texto</td>
-<td>Texto</td>
-<td>Texto</td>
-</tr>
-</tbody>
-</table>
-<h2 id="comentarios-html-(invisiveis)">Comentários HTML (invisíveis)</h2>
-<!-- Este é um comentário que não aparece no HTML renderizado -->
-<h2 id="caracteres-especiais">Caracteres Especiais</h2>
-<p>© ® ™ € £ ¥</p>
-<h2 id="quebra-de-pagina">Quebra de Página</h2>
+<p>E código:</p>
+<pre class="hljs"><code><span class="hljs-keyword">def</span> <span class="hljs-title function_">hello</span>():
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"mundo"</span>)
+</code></pre>
+</blockquote>
 <hr/>
-<h2 id="conclusao">Conclusão</h2>
-<p>Este documento contém <strong>todos</strong> os elementos principais do GitHub Flavored Markdown:</p>
+<h2 id="teste-de-links" tabindex="-1"><a class="header-anchor" href="#teste-de-links"><span>Teste de Links</span></a></h2>
+<p>Link direto: <a href="https://example.com" rel="noopener noreferrer" target="_blank">https://example.com</a></p>
+<p>Link com texto: <a href="https://example.com" rel="noopener noreferrer" target="_blank">Clique aqui</a></p>
+<p>Link de referência: <a href="https://reference.example.com" rel="noopener noreferrer" target="_blank" title="Título do link">Link de referência</a></p>
+<p>Link automático: <a href="https://autolink.example.com" rel="noopener noreferrer" target="_blank">https://autolink.example.com</a></p>
+<p>Email: <a href="mailto:email@example.com">email@example.com</a></p>
+<hr/>
+<h2 id="teste-final" tabindex="-1"><a class="header-anchor" href="#teste-final"><span>Teste Final</span></a></h2>
+<p>Este arquivo testa:</p>
 <ul>
-<li>✅ Títulos (H1-H6)</li>
-<li>✅ Ênfase (negrito, itálico, riscado)</li>
-<li>✅ Links e imagens</li>
-<li>✅ Listas (ordenadas, não ordenadas, tarefas)</li>
+<li>✅ Formatação de texto</li>
+<li>✅ Listas (ordered, unordered, tasks, definitions)</li>
 <li>✅ Código (inline e blocos)</li>
-<li>✅ Citações</li>
-<li>✅ Tabelas com alinhamento</li>
-<li>✅ Linhas horizontais</li>
-<li>✅ HTML embutido</li>
-<li>✅ Notas de rodapé</li>
-<li>✅ Escaping de caracteres</li>
+<li>✅ Tabelas (simples e avançadas)</li>
+<li>✅ Matemática (inline e display)</li>
+<li>✅ Imagens (com e sem atributos)</li>
+<li>✅ Containers customizados</li>
+<li>✅ Footnotes</li>
 <li>✅ Emojis</li>
+<li>✅ Abreviações</li>
+<li>✅ Vídeos</li>
+<li>✅ Spoilers/Details</li>
+<li>✅ Atributos customizados</li>
+<li>✅ Caracteres especiais</li>
+<li>✅ Links variados</li>
 </ul>
-<p><strong>Pronto para usar no seu blog!</strong></p>
+<hr/>
+<p><strong>Fim do teste!</strong> 🎉</p>
 <hr class="footnotes-sep"/>
 <section class="footnotes">
 <ol class="footnotes-list">
 <li class="footnote-item" id="fn1"><p>Esta é a primeira nota de rodapé. <a class="footnote-backref" href="#fnref1">↩︎</a></p>
 </li>
-<li class="footnote-item" id="fn2"><p>Esta é a segunda nota de rodapé com mais detalhes. <a class="footnote-backref" href="#fnref2">↩︎</a></p>
-</li>
+<li class="footnote-item" id="fn2"><p>Esta é uma nota de rodapé mais longa.</p>
+<p>Pode ter múltiplos parágrafos.</p>
+<p>E até código:</p>
+<pre class="hljs"><code><span class="hljs-built_in">print</span>(<span class="hljs-string">"Olá!"</span>)
+</code></pre>
+<a class="footnote-backref" href="#fnref2">↩︎</a></li>
 </ol>
 </section>
 
 <div class="home-link">
   <a href="/">Home</a>
 </div>
-</main>
-</body>
 
+  </main>
+</body>
 </html>
