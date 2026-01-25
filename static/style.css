@@ -2,12 +2,12 @@
 @import url('/static/markdown.css');
 
 :root {
-  /* Fundos - mantendo a paleta Tokyo Night */
+  /* Fundos */
   --bg-page: #070707;
   --bg-card: #111;
   --bg-elevated: #16161e;
   
-  /* Texto - mantendo hierarquia */
+  /* Texto */
   --text-bright: #c0caf5;
   --text-normal: #dce0f5;
   --text-muted: #787c99;
@@ -36,8 +36,8 @@ body {
   line-height: 1.6;
   color: var(--text-normal);
   background: var(--bg-page);
-  max-width: 900px;
-  margin: 20px auto;
+  max-width: 920px;
+  margin: 10px auto;
 }
 
 main {
@@ -70,7 +70,7 @@ body::before {
   font-style: italic;
   text-align: center;
   color: var(--text-muted);
-  margin-bottom: 2em;
+  margin: 10px 0 30px;
   display: block;
 }
 
@@ -86,20 +86,21 @@ body::before {
   padding: 15px;
   border-radius: 8px;
   background: var(--bg-elevated);
-  margin: 1em 0;
+  margin: 20px 0;
   font-size: 0.875em;
   border: 1px solid var(--border);
 }
 
 .article-meta div {
   font-family: 'JetBrains Mono', monospace;
+  margin: 5px 0;
 }
 
 /* Navegação */
 .home-link {
   text-align: center;
-  margin: 3em 0 2em;
-  padding: 20px;
+  margin: 50px 0 30px;
+  padding: 20px 0;
   border-top: 1px solid var(--border);
 }
 
@@ -110,6 +111,7 @@ body::before {
   color: var(--accent-blue);
   font-weight: 600;
   border: 1px solid var(--border);
+  text-decoration: none;
 }
 
 .home-link a:hover {
@@ -125,13 +127,13 @@ body::before {
 .series-list {
   list-style: none;
   padding: 0;
-  margin: 1em 0;
+  margin: 20px 0;
 }
 
 .article-list li,
 .page-list li,
 .series-list li {
-  margin: 0.5em 0;
+  margin: 10px 0;
   padding: 12px;
   border-radius: 8px;
   background: var(--bg-elevated);
@@ -148,7 +150,7 @@ body::before {
 .category-list {
   list-style: none;
   padding: 0;
-  margin: 1em 0;
+  margin: 20px 0;
 }
 
 .category-list li {
@@ -166,41 +168,15 @@ body::before {
 }
 
 /* Emojis das categorias */
-#tag_economia::before {
-  content: "📈 ";
-}
-
-#tag_grana::before {
-  content: "💸 ";
-}
-
-#tag_tecnologia::before {
-  content: "💻 ";
-}
-
-#tag_religiao::before {
-  content: "☦️ ";
-}
-
-#tag_academia::before {
-  content: "🏋️‍♂️ ";
-}
-
-#tag_filosofia::before {
-  content: "🏛️ ";
-}
-
-#tag_internet::before {
-  content: "🌐 ";
-}
-
-#tag_vida::before {
-  content: "⏳ ";
-}
-
-#tag_nutricao::before {
-  content: "🥩 ";
-}
+#tag_economia::before { content: "📈 "; }
+#tag_grana::before { content: "💸 "; }
+#tag_tecnologia::before { content: "💻 "; }
+#tag_religiao::before { content: "☦️ "; }
+#tag_academia::before { content: "🏋️‍♂️ "; }
+#tag_filosofia::before { content: "🏛️ "; }
+#tag_internet::before { content: "🌐 "; }
+#tag_vida::before { content: "⏳ "; }
+#tag_nutricao::before { content: "🥩 "; }
 
 /* Botões */
 .buttons {
@@ -208,6 +184,7 @@ body::before {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin: 20px 0;
 }
 
 .buttons a {
@@ -225,12 +202,12 @@ body::before {
     margin: 10px auto;
     font-size: 15px;
   }
-
+  
   main {
     margin: 0 10px;
     padding: 15px;
   }
-
+  
   .category-list li {
     display: block;
     margin: 0 0 8px;
