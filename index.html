@@ -40,94 +40,22 @@
 <ul class="series-list"><li><a href="/series/ia-basica">IA Básica</a></li><li><a href="/series/sql-basico">SQL Básico</a></li></ul>
 <h2 id="vida-em-semanas" tabindex="-1">Vida em semanas <a class="header-anchor" href="#vida-em-semanas" aria-hidden="true">#</a></h2>
 <p>Cada quadrado, uma semana.</p>
-<div class="lifegrid-container" style="max-width:100%;margin:20px auto;text-align:center;font-family:Inter,system-ui,sans-serif;color:#a9b1d6;font-size:14px;">
-  <canvas id="lifeGrid" style="max-width:100%;height:auto;border-radius:6px;background:#16161e;"></canvas>
-  <div class="lifegrid-caption" style="margin-top:15px;font-family:Inter,system-ui,sans-serif;color:#a9b1d6;font-size:14px;line-height:1.6;">
-    <div style="margin-bottom:12px;font-family:JetBrains,monospace;color:#c0caf5;font-size:13px;">
+<div class="lifegrid-container">
+  <canvas id="lifeGrid"></canvas>
+  <div class="lifegrid-caption">
+    <div class="lifegrid-stats">
       Idade: 28.7 anos | Semanas vividas: 1,499 | Semanas restantes: 3,197<br>
-      Última atualização: 27/01/2026 às 11:23
+      Última atualização: 27/01/2026 às 16:50
     </div>
-    <div style="display:flex;flex-direction:column;gap:8px;">
-      <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:16px;padding-top:8px;border-top:1px solid #1a1b26;">
-        <span style="display:flex;align-items:center;gap:6px;font-family:Inter,system-ui,sans-serif;color:#a9b1d6;font-size:13px;"><span style="width:12px;height:12px;border-radius:3px;background-color:#7aa2f7;"></span> Maioridade</span>
-        <span style="display:flex;align-items:center;gap:6px;font-family:Inter,system-ui,sans-serif;color:#a9b1d6;font-size:13px;"><span style="width:12px;height:12px;border-radius:3px;background-color:#9ece6a;"></span> Primeiro emprego</span>
-        <span style="display:flex;align-items:center;gap:6px;font-family:Inter,system-ui,sans-serif;color:#a9b1d6;font-size:13px;"><span style="width:12px;height:12px;border-radius:3px;background-color:#f7768e;"></span> Início pandemia COVID</span>
-      </div>
+    <div class="lifegrid-legends">
+      <span class="legend-item"><span class="legend-color" style="background-color:#7aa2f7;"></span> Maioridade</span>
+      <span class="legend-item"><span class="legend-color" style="background-color:#9ece6a;"></span> Primeiro emprego</span>
+      <span class="legend-item"><span class="legend-color" style="background-color:#f7768e;"></span> Início pandemia COVID</span>
     </div>
   </div>
 </div>
-<script>
-(function() {
-  const canvas = document.getElementById("lifeGrid");
-  if (!canvas) return;
-  const ctx = canvas.getContext("2d");
-  const totalWeeks = 4696;
-  const livedWeeks = 1499;
-  const weeksPerRow = 52;
-  const rows = 91;
-  const baseSquareSize = 10;
-  const baseGap = 2;
-  let opacity = 1.0;
-  let fadingIn = true;
-  const marcosEspeciais = [
-    {semana: 939, cor: "#7aa2f7"},
-    {semana: 1149, cor: "#9ece6a"},
-    {semana: 1192, cor: "#f7768e"}
-  ];
-  function resizeCanvas() {
-    const container = canvas.parentElement;
-    const containerWidth = container.clientWidth;
-    const maxCanvasWidth = Math.min(containerWidth * 0.95, weeksPerRow * (baseSquareSize + baseGap) - baseGap);
-    const scale = maxCanvasWidth / (weeksPerRow * (baseSquareSize + baseGap) - baseGap);
-    const squareSize = Math.max(baseSquareSize * scale, 3);
-    const gap = Math.max(baseGap * scale, 1);
-    canvas.width = weeksPerRow * (squareSize + gap) - gap;
-    canvas.height = rows * (squareSize + gap) - gap;
-    return { squareSize, gap };
-  }
-  function isMarcoEspecial(week) {
-    return marcosEspeciais.find(marco => marco.semana === week);
-  }
-  function drawGrid() {
-    const { squareSize, gap } = resizeCanvas();
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    for (let week = 0; week < totalWeeks; week++) {
-      const row = Math.floor(week / weeksPerRow);
-      const col = week % weeksPerRow;
-      const x = col * (squareSize + gap);
-      const y = row * (squareSize + gap);
-      const marco = isMarcoEspecial(week);
-      if (marco) {
-        ctx.fillStyle = marco.cor;
-        ctx.fillRect(x, y, squareSize, squareSize);
-      } else if (week < livedWeeks - 1) {
-        ctx.fillStyle = "#6c7086";
-        ctx.fillRect(x, y, squareSize, squareSize);
-      } else if (week === livedWeeks - 1 && livedWeeks > 0) {
-        ctx.fillStyle = `rgb(108, 112, 134, ${opacity})`;
-        ctx.fillRect(x, y, squareSize, squareSize);
-      } else {
-        ctx.fillStyle = "#313244";
-        ctx.fillRect(x, y, squareSize, squareSize);
-      }
-    }
-  }
-  function animate() {
-    if (fadingIn) {
-      opacity += 0.003;
-      if (opacity >= 1.0) fadingIn = false;
-    } else {
-      opacity -= 0.012;
-      if (opacity <= 0.3) fadingIn = true;
-    }
-    drawGrid();
-    requestAnimationFrame(animate);
-  }
-  window.addEventListener("resize", drawGrid);
-  drawGrid();
-  animate();
-})();
-</script>
+<script src="/static/js/lifegrid.js"></script>
+<script>initLifeGrid({"totalWeeks": 4696, "livedWeeks": 1499, "weeksPerRow": 52, "rows": 91, "marcosEspeciais": [{"semana": 939, "cor": "#7aa2f7"}, {"semana": 1149, "cor": "#9ece6a"}, {"semana": 1192, "cor": "#f7768e"}]});</script>
 
   </div>
 </article>
