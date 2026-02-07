@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Teste Completo de Markdown</title>
+  <title>Teste Completo de Markdown - Todos os Plugins</title>
   <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.css" crossorigin="anonymous">
   <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -12,25 +13,25 @@
     
 <article>
   <header>
-    <h1><a href="/">Teste Completo de Markdown</a></h1>
+    <h1><a href="/">Teste Completo de Markdown - Todos os Plugins</a></h1>
     
     
-    <p class="subtitle">Demonstração de todos os recursos disponíveis</p>
+    <p class="subtitle">Demonstração de todos os recursos disponíveis no blog</p>
     
     
     
     
     <div class="article-meta">
-      <div>Data de publicação: <time datetime="2026-01-25">25 - Jan - 2026</time></div>
+      <div>Data de publicação: <time datetime="2026-02-07">07 - Fev - 2026</time></div>
       
       
       <div>
         Categoria: 
         <nav aria-label="Categorias">
           
-            <a href="/categorias/tutoriais" rel="tag">Tutoriais</a>, 
+            <a href="/categorias/tecnologia" rel="tag">Tecnologia</a>, 
           
-            <a href="/categorias/documentacao" rel="tag">Documentação</a>
+            <a href="/categorias/internet" rel="tag">Internet</a>
           
         </nav>
       </div>
@@ -42,71 +43,105 @@
   </header>
   
   <div class="content">
-    <nav class="toc"><ol><li><a href="#1.-formata%C3%A7%C3%A3o-b%C3%A1sica">Formatação Básica </a></li><li><a href="#2.-links-e-imagens">Links e Imagens </a></li><li><a href="#3.-listas">Listas </a><ol><li><a href="#lista-n%C3%A3o-ordenada">Lista não ordenada </a></li><li><a href="#lista-ordenada">Lista ordenada </a></li><li><a href="#lista-de-tarefas">Lista de tarefas </a></li></ol></li><li><a href="#4.-tabelas">Tabelas </a><ol><li><a href="#tabela-com-alinhamento">Tabela com alinhamento </a></li><li><a href="#tabela-complexa-(multiline)">Tabela Complexa (Multiline) </a></li></ol></li><li><a href="#5.-blocos-de-c%C3%B3digo">Blocos de Código </a></li><li><a href="#6.-cita%C3%A7%C3%B5es">Citações </a></li><li><a href="#7.-linha-horizontal">Linha Horizontal </a></li><li><a href="#8.-emojis">Emojis </a></li><li><a href="#9.-abrevia%C3%A7%C3%B5es">Abreviações </a></li><li><a href="#10.-notas-de-rodap%C3%A9">Notas de Rodapé </a></li><li><a href="#11.-listas-de-defini%C3%A7%C3%A3o">Listas de Definição </a></li><li><a href="#12.-keyboard-keys">Keyboard Keys </a></li><li><a href="#13.-spoilers">Spoilers </a></li><li><a href="#14.-containers-customizados">Containers Customizados </a></li><li><a href="#15.-matem%C3%A1tica-(latex)">Matemática (LaTeX) </a><ol><li><a href="#equa%C3%A7%C3%B5es-inline">Equações Inline </a></li><li><a href="#equa%C3%A7%C3%B5es-em-bloco">Equações em Bloco </a></li></ol></li><li><a href="#16.-v%C3%ADdeos">Vídeos </a><ol><li><a href="#youtube">YouTube </a></li><li><a href="#vimeo">Vimeo </a></li></ol></li><li><a href="#17.-diagramas-mermaid">Diagramas Mermaid </a><ol><li><a href="#fluxograma">Fluxograma </a></li><li><a href="#diagrama-de-sequ%C3%AAncia">Diagrama de Sequência </a></li><li><a href="#gr%C3%A1fico-de-pizza">Gráfico de Pizza </a></li><li><a href="#gr%C3%A1fico-de-gantt">Gráfico de Gantt </a></li><li><a href="#diagrama-de-classes">Diagrama de Classes </a></li><li><a href="#diagrama-de-estados">Diagrama de Estados </a></li></ol></li><li><a href="#18.-atributos-personalizados">Atributos Personalizados </a></li><li><a href="#19.-details-%2F-summary-(expand%C3%ADvel)">Details / Summary (Expandível) </a><ol><li><a href="#conte%C3%BAdo-expand%C3%ADvel">Conteúdo expandível </a></li></ol></li><li><a href="#20.-checklist-avan%C3%A7ada">Checklist Avançada </a></li><li><a href="#21.-combina%C3%A7%C3%B5es-complexas">Combinações Complexas </a><ol><li><a href="#tabela-com-formata%C3%A7%C3%A3o">Tabela com formatação </a></li><li><a href="#cita%C3%A7%C3%A3o-com-c%C3%B3digo">Citação com código </a></li></ol></li><li><a href="#22.-miscel%C3%A2nea">Miscelânea </a><ol><li><a href="#emojis-em-contexto">Emojis em contexto </a></li><li><a href="#texto-com-m%C3%BAltiplos-formatos">Texto com múltiplos formatos </a></li><li><a href="#lista-dentro-de-cita%C3%A7%C3%A3o">Lista dentro de citação </a></li></ol></li><li><a href="#conclus%C3%A3o">Conclusão </a></li></ol></nav><h2 id="1.-formata%C3%A7%C3%A3o-b%C3%A1sica" tabindex="-1">1. Formatação Básica <a class="header-anchor" href="#1.-formata%C3%A7%C3%A3o-b%C3%A1sica" aria-hidden="true">#</a></h2>
-<p>Texto normal com <strong>negrito</strong>, <em>itálico</em>, <em><strong>negrito e itálico</strong></em>, <s>riscado</s>, <mark>destacado</mark>, H<sub>2</sub>O (subscrito), X<sup>2</sup> (sobrescrito), e <ins>texto inserido</ins>.</p>
-<p>Você pode usar <mark>destacar texto importante</mark> e adicionar H<sub>2</sub>O para fórmulas químicas ou X<sup>2</sup> + Y<sup>2</sup> = Z<sup>2</sup> para matemática simples.</p>
-<h2 id="2.-links-e-imagens" tabindex="-1">2. Links e Imagens <a class="header-anchor" href="#2.-links-e-imagens" aria-hidden="true">#</a></h2>
-<p><a href="#formatacao-basica">Link interno</a> | <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Link externo</a></p>
-<figure><img src="https://via.placeholder.com/600x300" alt="" title="Título da imagem" /><figcaption>Imagem de exemplo</figcaption></figure>
-<figure><img src="https://via.placeholder.com/400x200" alt="" width="400" height="200" /><figcaption>Imagem com tamanho específico</figcaption></figure>
-<h2 id="3.-listas" tabindex="-1">3. Listas <a class="header-anchor" href="#3.-listas" aria-hidden="true">#</a></h2>
-<h3 id="lista-n%C3%A3o-ordenada" tabindex="-1">Lista não ordenada <a class="header-anchor" href="#lista-n%C3%A3o-ordenada" aria-hidden="true">#</a></h3>
+    <nav class="toc"><ol><li><a href="#1.-t%C3%ADtulo-com-%C3%A2ncoras-(anchor)">Título com âncoras (anchor) </a><ol><li><a href="#1.1.-subse%C3%A7%C3%A3o-(h3)">1. Subseção (h3) </a><ol><li><a href="#1.1.1.-sub-subse%C3%A7%C3%A3o-(h4)">1.1. Sub-subseção (h4) </a></li></ol></li></ol></li><li><a href="#2.-%C3%AAnfase-e-formata%C3%A7%C3%A3o-inline">Ênfase e formatação inline </a></li><li><a href="#3.-emojis">Emojis </a></li><li><a href="#4.-lista-de-tarefas-(task-lists)">Lista de tarefas (task lists) </a></li><li><a href="#5.-lista-de-defini%C3%A7%C3%A3o-(deflist)">Lista de definição (deflist) </a></li><li><a href="#6.-cita%C3%A7%C3%B5es-(blockquote)">Citações (blockquote) </a></li><li><a href="#7.-c%C3%B3digo">Código </a></li><li><a href="#8.-spoilers-(custom)">Spoilers (custom) </a></li><li><a href="#9.-tabelas-(multimd-table)">Tabelas (multimd-table) </a></li><li><a href="#10.-imagens-e-figuras-(implicit-figures-%2B-imsize)">Imagens e figuras (implicit-figures + imsize) </a></li><li><a href="#11.-v%C3%ADdeos-(markdown-it-video)">Vídeos (markdown-it-video) </a></li><li><a href="#12.-f%C3%B3rmulas-matem%C3%A1ticas-(katex)">Fórmulas matemáticas (KaTeX) </a><ol><li><a href="#inline">Inline </a></li><li><a href="#bloco-(display)">Bloco (display) </a></li><li><a href="#fra%C3%A7%C3%B5es-e-binomiais">Frações e binomiais </a></li><li><a href="#limites-e-derivadas">Limites e derivadas </a></li><li><a href="#letras-gregas-e-conjuntos">Letras gregas e conjuntos </a></li><li><a href="#matrizes">Matrizes </a></li><li><a href="#equa%C3%A7%C3%B5es-alinhadas">Equações alinhadas </a></li><li><a href="#setas-e-rela%C3%A7%C3%B5es">Setas e relações </a></li><li><a href="#overline%2C-underline-e-acentos">Overline, underline e acentos </a></li><li><a href="#fun%C3%A7%C3%B5es-e-operadores">Funções e operadores </a></li><li><a href="#texto-em-matem%C3%A1tica">Texto em matemática </a></li><li><a href="#f%C3%B3rmula-de-bhaskara">Fórmula de Bhaskara </a></li></ol></li><li><a href="#13.-links-(linkify-%2B-linkattrs)">Links (linkify + linkAttrs) </a></li><li><a href="#14.-atributos-(attrs)">Atributos (attrs) </a></li><li><a href="#15.-notas-de-rodap%C3%A9-(footnote)">Notas de rodapé (footnote) </a></li><li><a href="#16.-html-bruto-(html%3A-true)">HTML bruto (html: true) </a></li><li><a href="#17.-detalhes-%2F-resumo-(html-nativo)">Detalhes / resumo (HTML nativo) </a></li><li><a href="#18.-resumo-dos-plugins-testados">Resumo dos plugins testados </a></li></ol></nav><p>Este artigo exercita <strong>todos</strong> os plugins do seu pipeline de Markdown. Use-o para validar o tema e o comportamento após mudanças. 🚀</p>
+<hr />
+<h2 id="1.-t%C3%ADtulo-com-%C3%A2ncoras-(anchor)" tabindex="-1">1. Título com âncoras (anchor) <a class="header-anchor" href="#1.-t%C3%ADtulo-com-%C3%A2ncoras-(anchor)" aria-hidden="true">#</a></h2>
+<p>Os headings geram links permanentes (símbolo # ao passar o mouse). Este é o <strong>h2</strong>.</p>
+<h3 id="1.1.-subse%C3%A7%C3%A3o-(h3)" tabindex="-1">1.1. Subseção (h3) <a class="header-anchor" href="#1.1.-subse%C3%A7%C3%A3o-(h3)" aria-hidden="true">#</a></h3>
+<p>Conteúdo aqui.</p>
+<h4 id="1.1.1.-sub-subse%C3%A7%C3%A3o-(h4)" tabindex="-1">1.1.1. Sub-subseção (h4) <a class="header-anchor" href="#1.1.1.-sub-subse%C3%A7%C3%A3o-(h4)" aria-hidden="true">#</a></h4>
+<p>Nível mínimo que entra no sumário.</p>
+<hr />
+<h2 id="2.-%C3%AAnfase-e-formata%C3%A7%C3%A3o-inline" tabindex="-1">2. Ênfase e formatação inline <a class="header-anchor" href="#2.-%C3%AAnfase-e-formata%C3%A7%C3%A3o-inline" aria-hidden="true">#</a></h2>
 <ul>
-<li>Item 1</li>
-<li>Item 2
-<ul>
-<li>Subitem 2.1</li>
-<li>Subitem 2.2</li>
+<li><strong>Negrito</strong> e <em>itálico</em></li>
+<li><mark>Texto destacado (mark)</mark></li>
+<li><sub>subscript</sub> e <sup>superscript</sup></li>
+<li><ins>Texto inserido (ins)</ins></li>
+<li><s>Riscado</s> e <ins>HTML permitido</ins></li>
+<li>Abreviação: a <em><a href="https://daringfireball.net/projects/markdown/" target="_blank" rel="noopener noreferrer">GFM</a></em> é usada aqui. (GFM = GitHub Flavored Markdown)</li>
+<li>Atalhos de teclado: <kbd>Ctrl</kbd>+<kbd>C</kbd>, <kbd>Enter</kbd>, <kbd>Alt</kbd>+<kbd>F4</kbd></li>
 </ul>
-</li>
-<li>Item 3</li>
-</ul>
-<h3 id="lista-ordenada" tabindex="-1">Lista ordenada <a class="header-anchor" href="#lista-ordenada" aria-hidden="true">#</a></h3>
-<ol>
-<li>Primeiro item</li>
-<li>Segundo item
-<ol>
-<li>Subitem 2.1</li>
-<li>Subitem 2.2</li>
-</ol>
-</li>
-<li>Terceiro item</li>
-</ol>
-<h3 id="lista-de-tarefas" tabindex="-1">Lista de tarefas <a class="header-anchor" href="#lista-de-tarefas" aria-hidden="true">#</a></h3>
+<hr />
+<h2 id="3.-emojis" tabindex="-1">3. Emojis <a class="header-anchor" href="#3.-emojis" aria-hidden="true">#</a></h2>
+<p>😄 ❤️ 🔥 📚 💻 ⚠️ ✅ ❌</p>
+<hr />
+<h2 id="4.-lista-de-tarefas-(task-lists)" tabindex="-1">4. Lista de tarefas (task lists) <a class="header-anchor" href="#4.-lista-de-tarefas-(task-lists)" aria-hidden="true">#</a></h2>
 <ul class="contains-task-list">
-<li class="task-list-item enabled"><input class="task-list-item-checkbox" checked=""type="checkbox" id="task-item-7815809"><label class="task-list-item-label" for="task-item-7815809"> Tarefa concluída</label></li>
-<li class="task-list-item enabled"><input class="task-list-item-checkbox" checked=""type="checkbox" id="task-item-5318423"><label class="task-list-item-label" for="task-item-5318423"> Outra tarefa concluída</label></li>
-<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox" id="task-item-4912475"><label class="task-list-item-label" for="task-item-4912475"> Tarefa pendente</label></li>
-<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox" id="task-item-2117935"><label class="task-list-item-label" for="task-item-2117935"> Outra tarefa pendente</label></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox" id="task-item-3751229"><label class="task-list-item-label" for="task-item-3751229"> Item pendente</label></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" checked=""type="checkbox" id="task-item-5701297"><label class="task-list-item-label" for="task-item-5701297"> Item concluído</label></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox" id="task-item-73015"> Outro pendente com <strong>formatação</strong><label class="task-list-item-label" for="task-item-73015"> Outro pendente com **formatação**</label></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" checked=""type="checkbox" id="task-item-5170655"><label class="task-list-item-label" for="task-item-5170655"> Concluído com :tada:</label></li>
 </ul>
-<h2 id="4.-tabelas" tabindex="-1">4. Tabelas <a class="header-anchor" href="#4.-tabelas" aria-hidden="true">#</a></h2>
+<hr />
+<h2 id="5.-lista-de-defini%C3%A7%C3%A3o-(deflist)" tabindex="-1">5. Lista de definição (deflist) <a class="header-anchor" href="#5.-lista-de-defini%C3%A7%C3%A3o-(deflist)" aria-hidden="true">#</a></h2>
+<dl>
+<dt>Termo 1</dt>
+<dd>Definição do primeiro termo. Pode ter múltiplos parágrafos.</dd>
+<dt>Termo 2</dt>
+<dd>Segunda definição.</dd>
+<dt>Termo 3</dt>
+<dd>Terceira definição, também em uma linha.</dd>
+</dl>
+<hr />
+<h2 id="6.-cita%C3%A7%C3%B5es-(blockquote)" tabindex="-1">6. Citações (blockquote) <a class="header-anchor" href="#6.-cita%C3%A7%C3%B5es-(blockquote)" aria-hidden="true">#</a></h2>
+<blockquote class="blockquote">
+<p>Citação simples com <strong>ênfase</strong> e <a href="https://example.com" target="_blank" rel="noopener noreferrer">link</a>.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Citação com múltiplos
+parágrafos.</p>
+<p>E um terceiro parágrafo.</p>
+</blockquote>
+<hr />
+<h2 id="7.-c%C3%B3digo" tabindex="-1">7. Código <a class="header-anchor" href="#7.-c%C3%B3digo" aria-hidden="true">#</a></h2>
+<p>Inline: use <code>print(&quot;Hello&quot;)</code> no texto.</p>
+<p>Bloco com syntax highlight (JavaScript):</p>
+<pre class="hljs"><code><span class="hljs-keyword">function</span> <span class="hljs-title function_">greet</span>(<span class="hljs-params">name</span>) {
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;Olá, &quot;</span> + name + <span class="hljs-string">&quot;!&quot;</span>);
+}
+<span class="hljs-title function_">greet</span>(<span class="hljs-string">&quot;Blog&quot;</span>);
+</code></pre>
+<p>Bloco sem linguagem:</p>
+<pre class="hljs"><code>texto puro
+sem highlight
+</code></pre>
+<p>Python:</p>
+<pre class="hljs"><code><span class="hljs-keyword">def</span> <span class="hljs-title function_">fib</span>(<span class="hljs-params">n</span>):
+    <span class="hljs-keyword">if</span> n &lt;= <span class="hljs-number">1</span>:
+        <span class="hljs-keyword">return</span> n
+    <span class="hljs-keyword">return</span> fib(n - <span class="hljs-number">1</span>) + fib(n - <span class="hljs-number">2</span>)
+</code></pre>
+<p>Dentro de código, spoilers <strong>não</strong> devem ativar: <span class="spoiler">isto continua literal</span>.</p>
+<hr />
+<h2 id="8.-spoilers-(custom)" tabindex="-1">8. Spoilers (custom) <a class="header-anchor" href="#8.-spoilers-(custom)" aria-hidden="true">#</a></h2>
+<p>No texto normal, <span class="spoiler">este trecho é spoiler</span> e fica oculto até passar o mouse.</p>
+<p>Outro exemplo: a resposta é <span class="spoiler">42</span>.</p>
+<hr />
+<h2 id="9.-tabelas-(multimd-table)" tabindex="-1">9. Tabelas (multimd-table) <a class="header-anchor" href="#9.-tabelas-(multimd-table)" aria-hidden="true">#</a></h2>
+<p>Tabela básica:</p>
 <div class="table-wrapper"><table class="markdown-table">
 <thead>
 <tr>
-<th>Nome</th>
-<th>Idade</th>
-<th>Cidade</th>
+<th>Coluna A</th>
+<th>Coluna B</th>
+<th>Coluna C</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>João</td>
-<td>25</td>
-<td>São Paulo</td>
+<td>a1</td>
+<td>b1</td>
+<td>c1</td>
 </tr>
 <tr>
-<td>Maria</td>
-<td>30</td>
-<td>Rio de Janeiro</td>
-</tr>
-<tr>
-<td>Pedro</td>
-<td>28</td>
-<td>Belo Horizonte</td>
+<td>a2</td>
+<td>b2</td>
+<td>c2</td>
 </tr>
 </tbody>
 </table>
-</div><h3 id="tabela-com-alinhamento" tabindex="-1">Tabela com alinhamento <a class="header-anchor" href="#tabela-com-alinhamento" aria-hidden="true">#</a></h3>
+</div><p>Tabela com alinhamento:</p>
 <div class="table-wrapper"><table class="markdown-table">
 <thead>
 <tr>
@@ -117,442 +152,215 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">A</td>
-<td style="text-align:center">B</td>
-<td style="text-align:right">C</td>
-</tr>
-<tr>
-<td style="text-align:left">1</td>
-<td style="text-align:center">2</td>
-<td style="text-align:right">3</td>
+<td style="text-align:left">left</td>
+<td style="text-align:center">center</td>
+<td style="text-align:right">right</td>
 </tr>
 </tbody>
 </table>
-</div><h3 id="tabela-complexa-(multiline)" tabindex="-1">Tabela Complexa (Multiline) <a class="header-anchor" href="#tabela-complexa-(multiline)" aria-hidden="true">#</a></h3>
-<div class="table-wrapper"><table class="markdown-table">
-<thead>
-<tr>
-<th></th>
-<th style="text-align:center" colspan="2">Grouping</th>
-</tr>
-<tr>
-<th>First Header</th>
-<th style="text-align:center">Second Header</th>
-<th style="text-align:right">Third Header</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Content</td>
-</tr>
-<tr>
-<td>Content</td>
-<td style="text-align:center"><strong>Cell</strong></td>
-<td style="text-align:right">Cell</td>
-</tr>
-<tr>
-<td>New section</td>
-<td style="text-align:center">More</td>
-<td style="text-align:right">Data</td>
-</tr>
-</tbody>
-</table>
-</div><h2 id="5.-blocos-de-c%C3%B3digo" tabindex="-1">5. Blocos de Código <a class="header-anchor" href="#5.-blocos-de-c%C3%B3digo" aria-hidden="true">#</a></h2>
-<p>Código inline: <code>const x = 42;</code></p>
-<pre class="hljs"><code><span class="hljs-comment">// Código JavaScript com syntax highlighting</span>
-<span class="hljs-keyword">function</span> <span class="hljs-title function_">fibonacci</span>(<span class="hljs-params">n</span>) {
-  <span class="hljs-keyword">if</span> (n &lt;= <span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> n;
-  <span class="hljs-keyword">return</span> <span class="hljs-title function_">fibonacci</span>(n - <span class="hljs-number">1</span>) + <span class="hljs-title function_">fibonacci</span>(n - <span class="hljs-number">2</span>);
-}
-
-<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">fibonacci</span>(<span class="hljs-number">10</span>));
-</code></pre>
-<pre class="hljs"><code><span class="hljs-comment"># Código Python com syntax highlighting</span>
-<span class="hljs-keyword">def</span> <span class="hljs-title function_">quick_sort</span>(<span class="hljs-params">arr</span>):
-    <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(arr) &lt;= <span class="hljs-number">1</span>:
-        <span class="hljs-keyword">return</span> arr
-    pivot = arr[<span class="hljs-built_in">len</span>(arr) // <span class="hljs-number">2</span>]
-    left = [x <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> arr <span class="hljs-keyword">if</span> x &lt; pivot]
-    middle = [x <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> arr <span class="hljs-keyword">if</span> x == pivot]
-    right = [x <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> arr <span class="hljs-keyword">if</span> x &gt; pivot]
-    <span class="hljs-keyword">return</span> quick_sort(left) + middle + quick_sort(right)
-
-<span class="hljs-built_in">print</span>(quick_sort([<span class="hljs-number">3</span>, <span class="hljs-number">6</span>, <span class="hljs-number">8</span>, <span class="hljs-number">10</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>]))
-</code></pre>
-<pre class="hljs"><code><span class="hljs-comment">&lt;!-- Código HTML --&gt;</span>
-<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;pt-BR&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Exemplo<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Olá Mundo!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
-</code></pre>
-<pre class="hljs"><code><span class="hljs-comment">/* Código CSS */</span>
-<span class="hljs-selector-class">.container</span> {
-  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">1200px</span>;
-  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> auto;
-  <span class="hljs-attribute">padding</span>: <span class="hljs-number">2rem</span>;
-  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">var</span>(--bg-elevated);
-}
-</code></pre>
-<h2 id="6.-cita%C3%A7%C3%B5es" tabindex="-1">6. Citações <a class="header-anchor" href="#6.-cita%C3%A7%C3%B5es" aria-hidden="true">#</a></h2>
-<blockquote class="blockquote">
-<p>Esta é uma citação simples.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Esta é uma citação de múltiplas linhas.
-Ela continua aqui.</p>
-<p>E pode ter parágrafos separados.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Citações podem ser aninhadas</p>
-<blockquote class="blockquote">
-<p>Como esta citação dentro de outra</p>
-<blockquote class="blockquote">
-<p>E podem ter vários níveis</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<h2 id="7.-linha-horizontal" tabindex="-1">7. Linha Horizontal <a class="header-anchor" href="#7.-linha-horizontal" aria-hidden="true">#</a></h2>
-<p>Abaixo há uma linha horizontal:</p>
+</div><hr />
+<h2 id="10.-imagens-e-figuras-(implicit-figures-%2B-imsize)" tabindex="-1">10. Imagens e figuras (implicit-figures + imsize) <a class="header-anchor" href="#10.-imagens-e-figuras-(implicit-figures-%2B-imsize)" aria-hidden="true">#</a></h2>
+<p>Imagem com legenda (alt vira figcaption):</p>
+<figure><img src="https://via.placeholder.com/200x100?text=Figura+1" alt="" /><figcaption>Legenda da figura: logo ou ícone</figcaption></figure>
+<p>Imagem com tamanho (imsize), se suportado: <code>![Alt](url){width=300}</code> ou sintaxe do plugin.</p>
 <hr />
-<h2 id="8.-emojis" tabindex="-1">8. Emojis <a class="header-anchor" href="#8.-emojis" aria-hidden="true">#</a></h2>
-<p>😄 ❤️ 👍 🚀 🔥 ⭐ 🎉 💯 ☕ 💻 💡 ⚡</p>
-<h2 id="9.-abrevia%C3%A7%C3%B5es" tabindex="-1">9. Abreviações <a class="header-anchor" href="#9.-abrevia%C3%A7%C3%B5es" aria-hidden="true">#</a></h2>
-<p><abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr> são linguagens essenciais para web. Use <abbr title="HyperText Transfer Protocol">HTTP</abbr> para comunicação e <abbr title="Application Programming Interface">API</abbr> para integração.</p>
-<h2 id="10.-notas-de-rodap%C3%A9" tabindex="-1">10. Notas de Rodapé <a class="header-anchor" href="#10.-notas-de-rodap%C3%A9" aria-hidden="true">#</a></h2>
-<p>Este texto tem uma nota de rodapé<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> e outra nota<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>. Você pode ter quantas notas<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup> precisar.</p>
-<h2 id="11.-listas-de-defini%C3%A7%C3%A3o" tabindex="-1">11. Listas de Definição <a class="header-anchor" href="#11.-listas-de-defini%C3%A7%C3%A3o" aria-hidden="true">#</a></h2>
-<dl>
-<dt>Termo 1</dt>
-<dd>Definição do termo 1</dd>
-<dt>Termo 2</dt>
-<dd>Primeira definição do termo 2</dd>
-<dd>Segunda definição do termo 2</dd>
-<dt>Markdown</dt>
-<dd>Linguagem de marcação leve</dd>
-<dd>Criada por John Gruber</dd>
-<dd>Amplamente utilizada para documentação</dd>
-<dt>Python</dt>
-<dd>Linguagem de programação de alto nível</dd>
-<dd>Conhecida por sua sintaxe limpa e legível</dd>
-</dl>
-<h2 id="12.-keyboard-keys" tabindex="-1">12. Keyboard Keys <a class="header-anchor" href="#12.-keyboard-keys" aria-hidden="true">#</a></h2>
-<p>Pressione <kbd>Ctrl</kbd> + <kbd>C</kbd> para copiar.</p>
-<p>Use <kbd>Ctrl</kbd> + <kbd>V</kbd> para colar.</p>
-<p>Para salvar, use <kbd>Ctrl</kbd> + <kbd>S</kbd>.</p>
-<p>Atalhos do desenvolvedor: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd></p>
-<p>No Mac: <kbd>Cmd</kbd> + <kbd>Space</kbd></p>
-<h2 id="13.-spoilers" tabindex="-1">13. Spoilers <a class="header-anchor" href="#13.-spoilers" aria-hidden="true">#</a></h2>
-<p><span class="spoiler">Este texto está oculto e será revelado ao clicar</span></p>
-<p><span class="spoiler">Spoiler com conteúdo importante que não deve ser visto imediatamente</span></p>
-<h2 id="14.-containers-customizados" tabindex="-1">14. Containers Customizados <a class="header-anchor" href="#14.-containers-customizados" aria-hidden="true">#</a></h2>
-<div class="container-note"><div class="container-title">Nota Importante</div>
-<p>Este é um container de nota. Use para informações adicionais que complementam o conteúdo principal.</p>
-</div>
-<div class="container-tip"><div class="container-title">Dica Útil</div>
-<p>Este é um container de dica. Perfeito para sugestões úteis e boas práticas que podem ajudar o leitor.</p>
-</div>
-<div class="container-warning"><div class="container-title">Aviso</div>
-<p>Este é um container de aviso. Use para alertar sobre possíveis problemas ou situações que requerem atenção.</p>
-</div>
-<div class="container-danger"><div class="container-title">Perigo</div>
-<p>Este é um container de perigo. Use para avisos críticos que podem causar problemas sérios se ignorados.</p>
-</div>
-<div class="container-success"><div class="container-title">Sucesso</div>
-<p>Este é um container de sucesso. Use para mensagens positivas, confirmações e resultados bem-sucedidos.</p>
-</div>
-<div class="container-info"><div class="container-title">Informação</div>
-<p>Este é um container de informação. Use para dados relevantes, contexto adicional e detalhes importantes.</p>
-</div>
-<div class="container-example"><div class="container-title">Exemplo Prático</div>
-<p>Este é um container de exemplo. Perfeito para demonstrações práticas e casos de uso reais.</p>
-<pre class="hljs"><code><span class="hljs-keyword">const</span> exemplo = <span class="hljs-string">&quot;código dentro do container&quot;</span>;
-<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(exemplo);
-</code></pre>
-</div>
-<div class="container-important"><div class="container-title">Muito Importante</div>
-<p>Este é um container de conteúdo importante. Use para destacar informações cruciais que não podem ser perdidas.</p>
-</div>
-<div class="container-caution"><div class="container-title">Cuidado</div>
-<p>Este é um container de cuidado. Similar ao warning, mas com um tom menos urgente.</p>
-</div>
-<h2 id="15.-matem%C3%A1tica-(latex)" tabindex="-1">15. Matemática (LaTeX) <a class="header-anchor" href="#15.-matem%C3%A1tica-(latex)" aria-hidden="true">#</a></h2>
-<h3 id="equa%C3%A7%C3%B5es-inline" tabindex="-1">Equações Inline <a class="header-anchor" href="#equa%C3%A7%C3%B5es-inline" aria-hidden="true">#</a></h3>
-<p>A equação mais famosa: $E = mc^2$</p>
-<p>Fórmula de Pitágoras: $a^2 + b^2 = c^2$</p>
-<p>Área do círculo: $A = \pi r^2$</p>
-<h3 id="equa%C3%A7%C3%B5es-em-bloco" tabindex="-1">Equações em Bloco <a class="header-anchor" href="#equa%C3%A7%C3%B5es-em-bloco" aria-hidden="true">#</a></h3>
-<p>Integral de Gauss:</p>
-<p>$$
-\int_{-\infty}^{\infty} e<sup>{-x</sup>2} dx = \sqrt{\pi}
-$$</p>
-<p>Fórmula quadrática:</p>
-<p>$$
-x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
-$$</p>
-<p>Série de Taylor:</p>
-<p>$$
-f(x) = f(a) + f’(a)(x-a) + \frac{f’‘(a)}{2!}(x-a)^2 + \frac{f’‘’(a)}{3!}(x-a)^3 + \cdots
-$$</p>
-<p>Matriz:</p>
-<p>$$
-\begin{bmatrix}
-a &amp; b &amp; c \
-d &amp; e &amp; f \
-g &amp; h &amp; i
-\end{bmatrix}
-$$</p>
-<p>Somatório:</p>
-<p>$$
-\sum_{i=1}^{n} i = \frac{n(n+1)}{2}
-$$</p>
-<h2 id="16.-v%C3%ADdeos" tabindex="-1">16. Vídeos <a class="header-anchor" href="#16.-v%C3%ADdeos" aria-hidden="true">#</a></h2>
-<h3 id="youtube" tabindex="-1">YouTube <a class="header-anchor" href="#youtube" aria-hidden="true">#</a></h3>
+<h2 id="11.-v%C3%ADdeos-(markdown-it-video)" tabindex="-1">11. Vídeos (markdown-it-video) <a class="header-anchor" href="#11.-v%C3%ADdeos-(markdown-it-video)" aria-hidden="true">#</a></h2>
+<p>YouTube (ID do vídeo):</p>
 <p><div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item youtube-player" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></p>
-<h3 id="vimeo" tabindex="-1">Vimeo <a class="header-anchor" href="#vimeo" aria-hidden="true">#</a></h3>
-<p><div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item vimeo-player" type="text/html" width="500" height="281" src="https://player.vimeo.com/video/123456789" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></p>
-<h2 id="17.-diagramas-mermaid" tabindex="-1">17. Diagramas Mermaid <a class="header-anchor" href="#17.-diagramas-mermaid" aria-hidden="true">#</a></h2>
-<h3 id="fluxograma" tabindex="-1">Fluxograma <a class="header-anchor" href="#fluxograma" aria-hidden="true">#</a></h3>
-<pre class="hljs"><code>graph TD
-    A[Início] --&gt; B{Decisão}
-    B --&gt;|Sim| C[Resultado 1]
-    B --&gt;|Não| D[Resultado 2]
-    C --&gt; E[Fim]
-    D --&gt; E
-</code></pre>
-<h3 id="diagrama-de-sequ%C3%AAncia" tabindex="-1">Diagrama de Sequência <a class="header-anchor" href="#diagrama-de-sequ%C3%AAncia" aria-hidden="true">#</a></h3>
-<pre class="hljs"><code>sequenceDiagram
-    participant Alice
-    participant Bob
-    participant John
-    Alice-&gt;&gt;Bob: Olá Bob!
-    Bob-&gt;&gt;Alice: Olá Alice!
-    Bob-&gt;&gt;John: Como você está John?
-    John--&gt;&gt;Bob: Muito bem, obrigado!
-    Bob--&gt;&gt;Alice: John está bem!
-</code></pre>
-<h3 id="gr%C3%A1fico-de-pizza" tabindex="-1">Gráfico de Pizza <a class="header-anchor" href="#gr%C3%A1fico-de-pizza" aria-hidden="true">#</a></h3>
-<pre class="hljs"><code>pie title Distribuição de Tempo
-    &quot;Trabalho&quot; : 40
-    &quot;Estudo&quot; : 30
-    &quot;Lazer&quot; : 20
-    &quot;Outros&quot; : 10
-</code></pre>
-<h3 id="gr%C3%A1fico-de-gantt" tabindex="-1">Gráfico de Gantt <a class="header-anchor" href="#gr%C3%A1fico-de-gantt" aria-hidden="true">#</a></h3>
-<pre class="hljs"><code>gantt
-    title Cronograma do Projeto
-    dateFormat  YYYY-MM-DD
-    section Fase 1
-    Planejamento           :a1, 2026-01-01, 30d
-    Desenvolvimento        :a2, after a1, 60d
-    section Fase 2
-    Testes                 :a3, after a2, 20d
-    Deploy                 :a4, after a3, 10d
-</code></pre>
-<h3 id="diagrama-de-classes" tabindex="-1">Diagrama de Classes <a class="header-anchor" href="#diagrama-de-classes" aria-hidden="true">#</a></h3>
-<pre class="hljs"><code>classDiagram
-    Animal &lt;|-- Duck
-    Animal &lt;|-- Fish
-    Animal &lt;|-- Zebra
-    Animal : +int age
-    Animal : +String gender
-    Animal: +isMammal()
-    Animal: +mate()
-    class Duck{
-        +String beakColor
-        +swim()
-        +quack()
-    }
-    class Fish{
-        -int sizeInFeet
-        -canEat()
-    }
-    class Zebra{
-        +bool is_wild
-        +run()
-    }
-</code></pre>
-<h3 id="diagrama-de-estados" tabindex="-1">Diagrama de Estados <a class="header-anchor" href="#diagrama-de-estados" aria-hidden="true">#</a></h3>
-<pre class="hljs"><code>stateDiagram-v2
-    [*] --&gt; Still
-    Still --&gt; [*]
-    Still --&gt; Moving
-    Moving --&gt; Still
-    Moving --&gt; Crash
-    Crash --&gt; [*]
-</code></pre>
-<h2 id="18.-atributos-personalizados" tabindex="-1">18. Atributos Personalizados <a class="header-anchor" href="#18.-atributos-personalizados" aria-hidden="true">#</a></h2>
-<p class="text-center" id="custom-id">Este parágrafo tem uma classe <abbr title="Cascading Style Sheets">CSS</abbr> customizada.</p>
-<p><strong class="text-large" style="color: var(--accent-cyan);">Texto em negrito e grande</strong></p>
-<p class="text-center text-bright">Texto centralizado e em destaque</p>
-<h2 id="19.-details-%2F-summary-(expand%C3%ADvel)" tabindex="-1">19. Details / Summary (Expandível) <a class="header-anchor" href="#19.-details-%2F-summary-(expand%C3%ADvel)" aria-hidden="true">#</a></h2>
+<p>Vimeo (ID):</p>
+<p><div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item vimeo-player" type="text/html" width="500" height="281" src="https://player.vimeo.com/video/148751763" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></p>
+<hr />
+<h2 id="12.-f%C3%B3rmulas-matem%C3%A1ticas-(katex)" tabindex="-1">12. Fórmulas matemáticas (KaTeX) <a class="header-anchor" href="#12.-f%C3%B3rmulas-matem%C3%A1ticas-(katex)" aria-hidden="true">#</a></h2>
+<p>O blog usa <strong>KaTeX 0.16</strong> no build (Node). Sintaxe: <code>&lt;span data-katex-inline=&quot;0&quot;&gt;&lt;/span&gt;</code> para inline e <code>&lt;span data-katex-block=&quot;0&quot;&gt;&lt;/span&gt;</code> para bloco. O CSS está em <code>layouts/base.html</code>.</p>
+<h3 id="inline" tabindex="-1">Inline <a class="header-anchor" href="#inline" aria-hidden="true">#</a></h3>
+<p><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord mathnormal">m</span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0404em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6954em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05556em;">γ</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0085em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.1328em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9072em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord">2</span></span></span><span style="top:-2.8672em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="1.08em" viewBox="0 0 400000 1080" preserveAspectRatio="xMinYMin slice"><path d="M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1328em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">1</span><span class="mord"><span class="mpunct">,</span></span><span class="mord">414</span></span></span></span>.</p>
+<h3 id="bloco-(display)" tabindex="-1">Bloco (display) <a class="header-anchor" href="#bloco-(display)" aria-hidden="true">#</a></h3>
+<p>Integral gaussiana:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.3846em;vertical-align:-0.9703em;"></span><span class="mop"><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4143em;"><span style="top:-1.7881em;margin-left:-0.4445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">∞</span></span></span></span><span style="top:-3.8129em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∞</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9703em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.0369em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-2.931em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.1908em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8492em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span><span style="top:-2.8092em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="1.08em" viewBox="0 0 400000 1080" preserveAspectRatio="xMinYMin slice"><path d="M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1908em;"><span></span></span></span></span></span></span></span></span></span></p>
+<p>Série de Basel:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.9185em;vertical-align:-1.2671em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6514em;"><span style="top:-1.8829em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∞</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2671em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1771em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4911em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">6</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<h3 id="fra%C3%A7%C3%B5es-e-binomiais" tabindex="-1">Frações e binomiais <a class="header-anchor" href="#fra%C3%A7%C3%B5es-e-binomiais" aria-hidden="true">#</a></h3>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.4015em;vertical-align:-1.0801em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.2649em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.0801em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.4em;vertical-align:-0.95em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">3</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:2em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1076em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.3074em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mclose">!</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mclose">)!</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="mclose">!</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<h3 id="limites-e-derivadas" tabindex="-1">Limites e derivadas <a class="header-anchor" href="#limites-e-derivadas" aria-hidden="true">#</a></h3>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.062em;vertical-align:-0.7171em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.3829em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="mrel mtight">→</span><span class="mord mtight">0</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7171em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3449em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">x</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mop">sin</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:2em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord mathnormal">x</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:2em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8019em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1791em;vertical-align:-0.7521em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.3479em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">h</span><span class="mrel mtight">→</span><span class="mord mtight">0</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7521em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">h</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">h</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<h3 id="letras-gregas-e-conjuntos" tabindex="-1">Letras gregas e conjuntos <a class="header-anchor" href="#letras-gregas-e-conjuntos" aria-hidden="true">#</a></h3>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.05556em;">γ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">Ω</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">λ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span></span></span></span></span></p>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8833em;vertical-align:-0.1944em;"></span><span class="mord mathbb">R</span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊂</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathbb">N</span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathcal">L</span><span class="mopen">{</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mclose">}</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal">s</span><span class="mclose">)</span></span></span></span></span></p>
+<h3 id="matrizes" tabindex="-1">Matrizes <a class="header-anchor" href="#matrizes" aria-hidden="true">#</a></h3>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.4em;vertical-align:-0.95em;"></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">a</span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.95em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">b</span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.95em;"><span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:2em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.95em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.95em;"><span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span><span class="mspace" style="margin-right:2em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">[</span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">x</span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.95em;"><span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">]</span></span></span></span></span></span></span></p>
+<h3 id="equa%C3%A7%C3%B5es-alinhadas" tabindex="-1">Equações alinhadas <a class="header-anchor" href="#equa%C3%A7%C3%B5es-alinhadas" aria-hidden="true">#</a></h3>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3.0482em;vertical-align:-1.2741em;"></span><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.7741em;"><span style="top:-3.91em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">b</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-2.3859em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">b</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2741em;"><span></span></span></span></span></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.7741em;"><span style="top:-3.91em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">2</span><span class="mord mathnormal">ab</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-2.3859em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">2</span><span class="mord mathnormal">ab</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2741em;"><span></span></span></span></span></span></span></span></span></span></span></span></p>
+<h3 id="setas-e-rela%C3%A7%C3%B5es" tabindex="-1">Setas e relações <a class="header-anchor" href="#setas-e-rela%C3%A7%C3%B5es" aria-hidden="true">#</a></h3>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⇒</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">←</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8304em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">b</span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="inner"><span class="mord"><span class="mrel"></span></span></span><span class="fix"></span></span></span></span></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></span></p>
+<h3 id="overline%2C-underline-e-acentos" tabindex="-1">Overline, underline e acentos <a class="header-anchor" href="#overline%2C-underline-e-acentos" aria-hidden="true">#</a></h3>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0833em;vertical-align:-0.2em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span><span style="top:-3.8033em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord underline"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.4306em;"><span style="top:-2.84em;"><span class="pstrut" style="height:3em;"></span><span class="underline-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2em;"><span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">x</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2222em;"><span class="mord">^</span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.714em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2077em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin"><path d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
+3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
+10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
+-1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
+-7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
+H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
+c-16-25.333-24-45-24-59z"/></svg></span></span></span></span></span></span></span></span></span></span></span></p>
+<h3 id="fun%C3%A7%C3%B5es-e-operadores" tabindex="-1">Funções e operadores <a class="header-anchor" href="#fun%C3%A7%C3%B5es-e-operadores" aria-hidden="true">#</a></h3>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.4221em;vertical-align:-0.7277em;"></span><span class="mop">sin</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">cos</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">ln</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.4306em;"><span style="top:-2.3723em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">max</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7277em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+<h3 id="texto-em-matem%C3%A1tica" tabindex="-1">Texto em matemática <a class="header-anchor" href="#texto-em-matem%C3%A1tica" aria-hidden="true">#</a></h3>
+<p>Use <code>\text{...}</code>. Para acentos use comandos LaTeX: <code>\'a</code> = á, <code>\'\i</code> = í.</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord text"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord">a</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">ˊ</span></span></span></span></span></span></span><span class="mord">rea</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0585em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:2em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord text"><span class="mord">nota: </span></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></span></p>
+<p>Inline: <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.0391em;"></span><span class="mord text"><span class="mord">Obs: </span></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">N</span></span></span></span>.</p>
+<h3 id="f%C3%B3rmula-de-bhaskara" tabindex="-1">Fórmula de Bhaskara <a class="header-anchor" href="#f%C3%B3rmula-de-bhaskara" aria-hidden="true">#</a></h3>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2764em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.5904em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mord mathnormal">a</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">−</span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">±</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9134em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">4</span><span class="mord mathnormal">a</span><span class="mord mathnormal">c</span></span></span><span style="top:-2.8734em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="1.08em" viewBox="0 0 400000 1080" preserveAspectRatio="xMinYMin slice"><path d="M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1266em;"><span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<hr />
+<h2 id="13.-links-(linkify-%2B-linkattrs)" tabindex="-1">13. Links (linkify + linkAttrs) <a class="header-anchor" href="#13.-links-(linkify-%2B-linkattrs)" aria-hidden="true">#</a></h2>
+<p>Links externos abrem em nova aba com <code>rel=&quot;noopener noreferrer&quot;</code>:</p>
+<ul>
+<li><a href="https://example.com" target="_blank" rel="noopener noreferrer">https://example.com</a></li>
+<li><a href="https://github.com" target="_blank" rel="noopener noreferrer">Texto do link</a></li>
+<li><a href="https://cursor.com" target="_blank" rel="noopener noreferrer">https://cursor.com</a></li>
+</ul>
+<hr />
+<h2 id="14.-atributos-(attrs)" tabindex="-1">14. Atributos (attrs) <a class="header-anchor" href="#14.-atributos-(attrs)" aria-hidden="true">#</a></h2>
+<p>Parágrafo com classe à direita: {.text-right} (se o tema suportar).</p>
+<hr />
+<h2 id="15.-notas-de-rodap%C3%A9-(footnote)" tabindex="-1">15. Notas de rodapé (footnote) <a class="header-anchor" href="#15.-notas-de-rodap%C3%A9-(footnote)" aria-hidden="true">#</a></h2>
+<p>Texto com referência à nota<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> e outra<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>.</p>
+<hr />
+<h2 id="16.-html-bruto-(html%3A-true)" tabindex="-1">16. HTML bruto (html: true) <a class="header-anchor" href="#16.-html-bruto-(html%3A-true)" aria-hidden="true">#</a></h2>
+<div style="padding: 8px; background: var(--bg-elevated); border-radius: 4px; margin: 1em 0;">
+  Bloco HTML customizado (se <code>html: true</code> estiver ativo).
+</div>
+<hr />
+<h2 id="17.-detalhes-%2F-resumo-(html-nativo)" tabindex="-1">17. Detalhes / resumo (HTML nativo) <a class="header-anchor" href="#17.-detalhes-%2F-resumo-(html-nativo)" aria-hidden="true">#</a></h2>
 <details>
 <summary>Clique para expandir</summary>
-<p>Este conteúdo está oculto até você clicar no título acima.</p>
-<p>Você pode incluir:</p>
+<p>Conteúdo oculto até abrir. Pode ter <strong>markdown</strong> e listas:</p>
 <ul>
-<li>Listas</li>
-<li><strong>Formatação</strong></li>
-<li><code>Código</code></li>
+<li>item 1</li>
+<li>item 2</li>
 </ul>
-<pre class="hljs"><code><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;Até código!&quot;</span>);
-</code></pre>
 </details>
-<details>
-<summary>Outro exemplo com mais conteúdo</summary>
-<h3 id="conte%C3%BAdo-expand%C3%ADvel" tabindex="-1">Conteúdo expandível <a class="header-anchor" href="#conte%C3%BAdo-expand%C3%ADvel" aria-hidden="true">#</a></h3>
-<p>Este é um exemplo mais complexo com múltiplos elementos:</p>
-<ol>
-<li>Item um</li>
-<li>Item dois</li>
-<li>Item três</li>
-</ol>
-<blockquote class="blockquote">
-<p>E até citações!</p>
-</blockquote>
-</details>
-<h2 id="20.-checklist-avan%C3%A7ada" tabindex="-1">20. Checklist Avançada <a class="header-anchor" href="#20.-checklist-avan%C3%A7ada" aria-hidden="true">#</a></h2>
-<ul class="contains-task-list">
-<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox" id="task-item-9047066"><label class="task-list-item-label" for="task-item-9047066"> Tarefa 1</label></li>
-<li class="task-list-item enabled"><input class="task-list-item-checkbox" checked=""type="checkbox" id="task-item-9136561"><label class="task-list-item-label" for="task-item-9136561"> Tarefa 2 (concluída)</label></li>
-<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox" id="task-item-8440458"><label class="task-list-item-label" for="task-item-8440458"> Tarefa 3</label>
-<ul class="contains-task-list">
-<li class="task-list-item enabled"><input class="task-list-item-checkbox" checked=""type="checkbox" id="task-item-7939256"><label class="task-list-item-label" for="task-item-7939256"> Subtarefa 3.1</label></li>
-<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox" id="task-item-9727513"><label class="task-list-item-label" for="task-item-9727513"> Subtarefa 3.2</label></li>
-<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox" id="task-item-7541948"><label class="task-list-item-label" for="task-item-7541948"> Subtarefa 3.3</label></li>
-</ul>
-</li>
-<li class="task-list-item enabled"><input class="task-list-item-checkbox" checked=""type="checkbox" id="task-item-867307"><label class="task-list-item-label" for="task-item-867307"> Tarefa 4</label>
-<ul class="contains-task-list">
-<li class="task-list-item enabled"><input class="task-list-item-checkbox" checked=""type="checkbox" id="task-item-8374283"><label class="task-list-item-label" for="task-item-8374283"> Todas as subtarefas concluídas</label></li>
-<li class="task-list-item enabled"><input class="task-list-item-checkbox" checked=""type="checkbox" id="task-item-6169007"><label class="task-list-item-label" for="task-item-6169007"> Tudo funcionando</label></li>
-</ul>
-</li>
-</ul>
-<h2 id="21.-combina%C3%A7%C3%B5es-complexas" tabindex="-1">21. Combinações Complexas <a class="header-anchor" href="#21.-combina%C3%A7%C3%B5es-complexas" aria-hidden="true">#</a></h2>
-<p>Você pode combinar <strong><em>negrito e itálico</em></strong> com <mark>destaque</mark> e <s>riscado</s>.</p>
-<p>Lista com vários elementos:</p>
-<ul>
-<li>Item com <code>código inline</code></li>
-<li>Item com <strong>negrito</strong> e <em>itálico</em></li>
-<li>Item com <a href="https://example.com" target="_blank" rel="noopener noreferrer">link</a> externo</li>
-<li>Item com H<sub>2</sub>O e X<sup>2</sup></li>
-<li>Item com <mark>destaque</mark> e <ins>inserção</ins></li>
-</ul>
-<h3 id="tabela-com-formata%C3%A7%C3%A3o" tabindex="-1">Tabela com formatação <a class="header-anchor" href="#tabela-com-formata%C3%A7%C3%A3o" aria-hidden="true">#</a></h3>
+<hr />
+<h2 id="18.-resumo-dos-plugins-testados" tabindex="-1">18. Resumo dos plugins testados <a class="header-anchor" href="#18.-resumo-dos-plugins-testados" aria-hidden="true">#</a></h2>
 <div class="table-wrapper"><table class="markdown-table">
 <thead>
 <tr>
-<th>Recurso</th>
-<th style="text-align:center">Status</th>
-<th>Notas</th>
+<th>Plugin / recurso</th>
+<th>Seção</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Negrito</strong></td>
-<td style="text-align:center">✅</td>
-<td><code>**texto**</code></td>
+<td>TOC (sumário)</td>
+<td>Topo</td>
 </tr>
 <tr>
-<td><em>Itálico</em></td>
-<td style="text-align:center">✅</td>
-<td><code>*texto*</code></td>
+<td>Anchor (âncoras em headings)</td>
+<td>1</td>
 </tr>
 <tr>
-<td><s>Riscado</s></td>
-<td style="text-align:center">✅</td>
-<td><code>~~texto~~</code></td>
+<td>Ênfase (mark, sub, sup, ins)</td>
+<td>2</td>
 </tr>
 <tr>
-<td><mark>Destacado</mark></td>
-<td style="text-align:center">✅</td>
-<td><code>==texto==</code></td>
+<td>Emoji</td>
+<td>3</td>
 </tr>
 <tr>
-<td><ins>Inserido</ins></td>
-<td style="text-align:center">✅</td>
-<td><code>++texto++</code></td>
+<td>Task lists</td>
+<td>4</td>
 </tr>
 <tr>
-<td>Sub<sub>script</sub></td>
-<td style="text-align:center">✅</td>
-<td><code>H~2~O</code></td>
+<td>Deflist</td>
+<td>5</td>
 </tr>
 <tr>
-<td>Super<sup>script</sup></td>
-<td style="text-align:center">✅</td>
-<td><code>X^2^</code></td>
+<td>Blockquote (classe .blockquote)</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Código + highlight.js</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Spoilers <span class="spoiler">..</span></td>
+<td>8</td>
+</tr>
+<tr>
+<td>Tabelas (multimd-table + .table-wrapper)</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Imagens / figuras</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Vídeo (YouTube / Vimeo)</td>
+<td>11</td>
+</tr>
+<tr>
+<td>KaTeX</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Linkify + linkAttrs</td>
+<td>13</td>
+</tr>
+<tr>
+<td>Attrs</td>
+<td>14</td>
+</tr>
+<tr>
+<td>Footnotes</td>
+<td>15</td>
+</tr>
+<tr>
+<td>HTML bruto</td>
+<td>16</td>
+</tr>
+<tr>
+<td>Details/summary</td>
+<td>17</td>
 </tr>
 </tbody>
 </table>
-</div><h3 id="cita%C3%A7%C3%A3o-com-c%C3%B3digo" tabindex="-1">Citação com código <a class="header-anchor" href="#cita%C3%A7%C3%A3o-com-c%C3%B3digo" aria-hidden="true">#</a></h3>
-<blockquote class="blockquote">
-<p>“A única maneira de fazer um ótimo trabalho é amar o que você faz.”
-— Steve Jobs</p>
-<pre class="hljs"><code><span class="hljs-keyword">def</span> <span class="hljs-title function_">amor_trabalho</span>():
-    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Sucesso!&quot;</span>
-</code></pre>
-</blockquote>
-<h2 id="22.-miscel%C3%A2nea" tabindex="-1">22. Miscelânea <a class="header-anchor" href="#22.-miscel%C3%A2nea" aria-hidden="true">#</a></h2>
-<h3 id="emojis-em-contexto" tabindex="-1">Emojis em contexto <a class="header-anchor" href="#emojis-em-contexto" aria-hidden="true">#</a></h3>
-<p>Adorei este tutorial! ❤️ ⭐ 🎉</p>
-<p>Programar em Python 🐍 é muito divertente! 🚀</p>
-<p>Café ☕ + Código 💻 = Produtividade ⚡</p>
-<h3 id="texto-com-m%C3%BAltiplos-formatos" tabindex="-1">Texto com múltiplos formatos <a class="header-anchor" href="#texto-com-m%C3%BAltiplos-formatos" aria-hidden="true">#</a></h3>
-<p>Este texto tem <strong>negrito</strong>, <em>itálico</em>, <code>código</code>, <a href="https://example.com" target="_blank" rel="noopener noreferrer">link</a>, <mark>destaque</mark>, <s>riscado</s>, <ins>inserido</ins>, H<sub>2</sub>O, X<sup>2</sup>, e até <kbd>Ctrl</kbd>+<kbd>C</kbd> tudo junto!</p>
-<h3 id="lista-dentro-de-cita%C3%A7%C3%A3o" tabindex="-1">Lista dentro de citação <a class="header-anchor" href="#lista-dentro-de-cita%C3%A7%C3%A3o" aria-hidden="true">#</a></h3>
-<blockquote class="blockquote">
-<p>Motivos para usar Markdown:</p>
-<ol>
-<li>Simples e legível</li>
-<li>Portátil</li>
-<li>Versátil</li>
-<li>Bem suportado</li>
-</ol>
-</blockquote>
-<hr />
-<h2 id="conclus%C3%A3o" tabindex="-1">Conclusão <a class="header-anchor" href="#conclus%C3%A3o" aria-hidden="true">#</a></h2>
-<p>Este documento demonstra <strong>TODOS</strong> os recursos de Markdown suportados pelo seu blog:</p>
-<p>✅ Formatação básica (negrito, itálico, riscado, destacado, inserido)<br />
-✅ Subscrito e sobrescrito<br />
-✅ Links e imagens (com tamanho)<br />
-✅ Listas (ordenadas, não ordenadas, tarefas, definição)<br />
-✅ Tabelas (simples, com alinhamento, complexas)<br />
-✅ Blocos de código com syntax highlighting<br />
-✅ Citações (simples e aninhadas)<br />
-✅ Emojis<br />
-✅ Abreviações<br />
-✅ Notas de rodapé<br />
-✅ Keyboard keys<br />
-✅ Spoilers<br />
-✅ Containers customizados (9 tipos)<br />
-✅ Matemática LaTeX (inline e bloco)<br />
-✅ Vídeos (YouTube e Vimeo)<br />
-✅ Diagramas Mermaid (6 tipos)<br />
-✅ Atributos personalizados<br />
-✅ Details/Summary expandível<br />
-✅ TOC (Sumário automático)<br />
-✅ Âncoras de cabeçalho<br />
-✅ Links externos com ícone</p>
-<p><strong>Use este documento como referência</strong> para criar conteúdo rico e expressivo! 🚀</p>
-<p class="text-center"></p>
-<hr />
-<p><strong>Última atualização:</strong> 25 de Janeiro de 2026<br />
-<strong>Versão:</strong> 2.0 Completa</p>
+</div><p>Se tudo renderizar como esperado, seu pipeline está completo. ✅</p>
 <hr class="footnotes-sep" />
 <section class="footnotes">
 <ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>Esta é a primeira nota de rodapé. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+<li id="fn1" class="footnote-item"><p>Conteúdo da primeira nota de rodapé. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn2" class="footnote-item"><p>Esta é a segunda nota de rodapé com mais detalhes e explicações adicionais. <a href="#fnref2" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn3" class="footnote-item"><p>Notas de rodapé podem conter <strong>formatação</strong> e <a href="https://example.com" target="_blank" rel="noopener noreferrer">links</a>. <a href="#fnref3" class="footnote-backref">↩︎</a></p>
+<li id="fn2" class="footnote-item"><p>Segunda nota. Pode ter <em>formatação</em> e <a href="https://example.com" target="_blank" rel="noopener noreferrer">links</a>. <a href="#fnref2" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
@@ -560,7 +368,7 @@ $$</p>
   </div>
 </article>
 
-    
+
     
     
     <div class="home-link">
